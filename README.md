@@ -2,7 +2,7 @@
 
 Code, analysis plans, and aggregate results for:
 
-> Yu Y. *Language model verdicts do not convey trajectory signal missed by an ICU risk model.* (Manuscript submitted.)
+> Yu Y. *A two-ceiling audit finds language-model verdicts miss useful trajectory signal in ICU risk prediction.* (Manuscript submitted.)
 
 **Pre-registration:** OSF, doi:[10.17605/OSF.IO/HBWN6](https://doi.org/10.17605/OSF.IO/HBWN6), registered 8 October 2026. The pre-specified addendum was added as an update on 10 October 2026.
 
