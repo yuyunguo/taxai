@@ -2,7 +2,7 @@
 
 Code, analysis plans, and aggregate results for:
 
-> Yu Y\*, Collaco BG\*, Prabha S, Haider SA, Malena CR, Wood NG, Leibovich BC, Forte AJ. *A two-ceiling audit finds language-model verdicts miss useful trajectory signal in ICU risk prediction.* (Manuscript submitted.) \*Equal contribution.
+> Yu Y\*, Collaco BG\*, Malena CR, Wood NG, Leibovich BC, Forte AJ. *A two-ceiling audit finds language-model verdicts miss useful trajectory signal in ICU risk prediction.* (Manuscript submitted.) \*Equal contribution.
 >
 > Code maintainer: Yunguo Yu (yuyunguo@gmail.com). Corresponding author: Antonio Jorge Forte (ajvforte@yahoo.com.br).
 
