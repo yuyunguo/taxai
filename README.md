@@ -87,7 +87,7 @@ LLM generation is deterministic (temperature 0, seed 42) and cached in append-on
 
 ## Synthetic example
 
-`examples/` contains synthetic inputs in the real file formats (`SCHEMA.md`) and a demo that runs the registered Gate 2 scoring and decision rule:
+`examples/` contains synthetic inputs in the real file formats (`SCHEMA.md`) and a demo that runs the registered Gate 2 scoring and decision rule, and the addendum's probability parsing and Firth test:
 
 ```bash
 python examples/make_synthetic.py && python examples/demo_gate2.py

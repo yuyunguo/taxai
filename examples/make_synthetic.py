@@ -1,7 +1,8 @@
 """Generate a synthetic Gate 2 input in the real file formats (no patient data).
 
 Writes examples/synthetic_imv_sample.csv (same columns as data_v2/v4/imv_sample.csv)
-and examples/synthetic_gen_imv.jsonl (same records as the explanation caches).
+examples/synthetic_gen_imv.jsonl (same records as the explanation caches), and
+examples/synthetic_gen_tierC.jsonl (elicited-probability responses, addendum C1a).
 All identifiers, probabilities, outcomes, and texts are random and synthetic.
 
 Usage (repository root): python examples/make_synthetic.py
@@ -33,6 +34,12 @@ def main(seed: int = 42, n_per_class: int = 200) -> None:
                 v = VERDICTS[rng.choice(3, p=p)]
                 text = f"Synthetic explanation. Overall, the AI estimate appears {v} for this patient."
                 fh.write(json.dumps({"method": method, "hadm_id": int(h), "response": text}) + "\n")
+    with open(OUT / "synthetic_gen_tierC.jsonl", "w") as fh:
+        for h, p_a, yy in zip(df["hadm_id"], df["pA"], y):
+            p = float(np.clip(p_a * np.exp(rng.normal(0.2 * yy, 0.6)), 0.001, 0.99)) * 100
+            text = ("Synthetic explanation. My estimate of the probability that this patient will need invasive "
+                    f"mechanical ventilation in the next 24 hours is {p:.1f}%.")
+            fh.write(json.dumps({"method": "C1a", "hadm_id": int(h), "response": text}) + "\n")
 
 
 if __name__ == "__main__":
