@@ -74,13 +74,24 @@ bash src/pipeline_v2/run_tierC.sh
 MAC_OLLAMA_HOST=http://<host>:11434 bash src/pipeline_v2/run_tierC_mac.sh
 python -m src.pipeline_v2.tierC_v4_boot10k
 
-# 7. Figures 1-4 and tables (aggregate results only)
+# 7. Post hoc operating characteristics of the H1 rule (simulation; no patient data)
+python scripts/sim_operating_characteristics.py
+
+# 8. Figures 1-4 and tables (aggregate results only)
 python scripts/gen_figures_v4.py
 python scripts/gen_posthoc_tables.py
 python scripts/gen_supp_note2.py
 ```
 
 LLM generation is deterministic (temperature 0, seed 42) and cached in append-only files, so re-running an analysis step does not regenerate responses.
+
+## Synthetic example
+
+`examples/` contains synthetic inputs in the real file formats (`SCHEMA.md`) and a demo that runs the registered Gate 2 scoring and decision rule:
+
+```bash
+python examples/make_synthetic.py && python examples/demo_gate2.py
+```
 
 ## Verifying the registered code
 
