@@ -1,0 +1,17 @@
+# Patient-derived data must never be committed (PhysioNet credentialed-access DUA)
+data_v2/
+data_eicu/
+data/
+*.jsonl
+*.parquet
+*.pkl
+logs/
+**/per_case*
+**/*_cases.csv
+**/sample_meta*.json
+**/case_study*.json
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/

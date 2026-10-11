@@ -1,0 +1,865 @@
+{
+  "n": 400,
+  "events": 200,
+  "qwen2.5:14b": {
+    "C1a": {
+      "parse_rate": 1.0,
+      "median_elicited": 0.042,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.4922,
+          "ci95": [
+            0.4363,
+            0.5491
+          ],
+          "ci99": [
+            0.4167,
+            0.5664
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.2588,
+          "ci95": [
+            -0.3371,
+            -0.1804
+          ],
+          "ci99": [
+            -0.3606,
+            -0.1535
+          ]
+        },
+        "firth_coef": 0.179,
+        "firth_ci99": [
+          -0.182,
+          0.54
+        ],
+        "lr_p": 0.016,
+        "spearman_with_pA": -0.1433,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.4922,
+          "ci95": [
+            0.4363,
+            0.5491
+          ],
+          "ci99": [
+            0.4167,
+            0.5664
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.2588,
+          "ci95": [
+            -0.3371,
+            -0.1804
+          ],
+          "ci99": [
+            -0.3606,
+            -0.1535
+          ]
+        },
+        "firth_coef": 0.179,
+        "firth_ci99": [
+          -0.182,
+          0.54
+        ],
+        "lr_p": 0.016,
+        "spearman_with_pA": -0.1433,
+        "conveys_beyond_prediction": false
+      }
+    },
+    "C1b": {
+      "parse_rate": 1.0,
+      "median_elicited": 0.3,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.6209,
+          "ci95": [
+            0.5685,
+            0.6731
+          ],
+          "ci99": [
+            0.5517,
+            0.688
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.1302,
+          "ci95": [
+            -0.1881,
+            -0.0708
+          ],
+          "ci99": [
+            -0.2098,
+            -0.054
+          ]
+        },
+        "firth_coef": 0.318,
+        "firth_ci99": [
+          -0.306,
+          0.941
+        ],
+        "lr_p": 0.0316,
+        "spearman_with_pA": 0.3595,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.6209,
+          "ci95": [
+            0.5685,
+            0.6731
+          ],
+          "ci99": [
+            0.5517,
+            0.688
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.1302,
+          "ci95": [
+            -0.1881,
+            -0.0708
+          ],
+          "ci99": [
+            -0.2098,
+            -0.054
+          ]
+        },
+        "firth_coef": 0.318,
+        "firth_ci99": [
+          -0.306,
+          0.941
+        ],
+        "lr_p": 0.0316,
+        "spearman_with_pA": 0.3595,
+        "conveys_beyond_prediction": false
+      },
+      "discriminates_without_prediction": true
+    },
+    "C3": {
+      "auroc": {
+        "est": 0.4774,
+        "ci95": [
+          0.4373,
+          0.518
+        ],
+        "ci99": [
+          0.4257,
+          0.5304
+        ]
+      },
+      "minus_registered_taxai": {
+        "est": -0.0213,
+        "ci95": [
+          -0.0663,
+          0.023
+        ],
+        "ci99": [
+          -0.079,
+          0.0374
+        ]
+      },
+      "max_attainable_auroc": 0.7125,
+      "distribution": {
+        "too high": 315,
+        "too low": 83,
+        "about right": 2
+      },
+      "about_right_share": 0.005,
+      "registered_about_right_share": 0.005,
+      "status": "closed",
+      "instruction_dependent": false
+    }
+  },
+  "gemma3:27b": {
+    "C1a": {
+      "parse_rate": 1.0,
+      "median_elicited": 0.03,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.6577,
+          "ci95": [
+            0.6041,
+            0.7089
+          ],
+          "ci99": [
+            0.585,
+            0.7245
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.0933,
+          "ci95": [
+            -0.1401,
+            -0.0481
+          ],
+          "ci99": [
+            -0.1546,
+            -0.0353
+          ]
+        },
+        "firth_coef": -0.063,
+        "firth_ci99": [
+          -0.662,
+          0.536
+        ],
+        "lr_p": 0.0837,
+        "spearman_with_pA": 0.6513,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.6577,
+          "ci95": [
+            0.6041,
+            0.7089
+          ],
+          "ci99": [
+            0.585,
+            0.7245
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.0933,
+          "ci95": [
+            -0.1401,
+            -0.0481
+          ],
+          "ci99": [
+            -0.1546,
+            -0.0353
+          ]
+        },
+        "firth_coef": -0.063,
+        "firth_ci99": [
+          -0.662,
+          0.536
+        ],
+        "lr_p": 0.0837,
+        "spearman_with_pA": 0.6513,
+        "conveys_beyond_prediction": false
+      }
+    },
+    "C1b": {
+      "parse_rate": 1.0,
+      "median_elicited": 0.45,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.5941,
+          "ci95": [
+            0.5391,
+            0.6473
+          ],
+          "ci99": [
+            0.5203,
+            0.6635
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.1569,
+          "ci95": [
+            -0.2185,
+            -0.0967
+          ],
+          "ci99": [
+            -0.2387,
+            -0.0782
+          ]
+        },
+        "firth_coef": 0.11,
+        "firth_ci99": [
+          -0.297,
+          0.518
+        ],
+        "lr_p": 0.0411,
+        "spearman_with_pA": 0.3267,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.5941,
+          "ci95": [
+            0.5391,
+            0.6473
+          ],
+          "ci99": [
+            0.5203,
+            0.6635
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.1569,
+          "ci95": [
+            -0.2185,
+            -0.0967
+          ],
+          "ci99": [
+            -0.2387,
+            -0.0782
+          ]
+        },
+        "firth_coef": 0.11,
+        "firth_ci99": [
+          -0.297,
+          0.518
+        ],
+        "lr_p": 0.0411,
+        "spearman_with_pA": 0.3267,
+        "conveys_beyond_prediction": false
+      },
+      "discriminates_without_prediction": true
+    },
+    "C2": {
+      "auroc": {
+        "est": 0.4939,
+        "ci95": [
+          0.445,
+          0.5416
+        ],
+        "ci99": [
+          0.4312,
+          0.5567
+        ]
+      },
+      "minus_registered_taxai": {
+        "est": 0.0039,
+        "ci95": [
+          -0.0572,
+          0.0638
+        ],
+        "ci99": [
+          -0.0776,
+          0.0816
+        ]
+      },
+      "max_attainable_auroc": 0.8931,
+      "distribution": {
+        "about right": 235,
+        "too high": 155,
+        "too low": 10
+      },
+      "about_right_share": 0.5875,
+      "registered_about_right_share": 0.69,
+      "hint_supported": false
+    },
+    "C3": {
+      "auroc": {
+        "est": 0.5475,
+        "ci95": [
+          0.4993,
+          0.5963
+        ],
+        "ci99": [
+          0.4839,
+          0.611
+        ]
+      },
+      "minus_registered_taxai": {
+        "est": 0.0574,
+        "ci95": [
+          -0.003,
+          0.1157
+        ],
+        "ci99": [
+          -0.0192,
+          0.1366
+        ]
+      },
+      "max_attainable_auroc": 0.9118,
+      "distribution": {
+        "about right": 232,
+        "too high": 164,
+        "too low": 4
+      },
+      "about_right_share": 0.58,
+      "registered_about_right_share": 0.69,
+      "status": "closed",
+      "instruction_dependent": false
+    }
+  },
+  "gpt-oss:20b": {
+    "C1a": {
+      "parse_rate": 0.9975,
+      "median_elicited": 0.019,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.7426,
+          "ci95": [
+            0.6951,
+            0.7897
+          ],
+          "ci99": [
+            0.6796,
+            0.8034
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.0073,
+          "ci95": [
+            -0.0218,
+            0.0075
+          ],
+          "ci99": [
+            -0.026,
+            0.0128
+          ]
+        },
+        "firth_coef": 0.319,
+        "firth_ci99": [
+          -0.868,
+          1.505
+        ],
+        "lr_p": 0.1605,
+        "spearman_with_pA": 0.9648,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.7437,
+          "ci95": [
+            0.6967,
+            0.7896
+          ],
+          "ci99": [
+            0.6807,
+            0.8048
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.0073,
+          "ci95": [
+            -0.0219,
+            0.0077
+          ],
+          "ci99": [
+            -0.0263,
+            0.0127
+          ]
+        },
+        "firth_coef": 0.321,
+        "firth_ci99": [
+          -0.867,
+          1.508
+        ],
+        "lr_p": 0.1602,
+        "spearman_with_pA": 0.965,
+        "conveys_beyond_prediction": false
+      }
+    },
+    "C1b": {
+      "parse_rate": 1.0,
+      "median_elicited": 0.1,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.6002,
+          "ci95": [
+            0.5456,
+            0.6536
+          ],
+          "ci99": [
+            0.5296,
+            0.6705
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.1509,
+          "ci95": [
+            -0.2127,
+            -0.0911
+          ],
+          "ci99": [
+            -0.2323,
+            -0.0714
+          ]
+        },
+        "firth_coef": 0.133,
+        "firth_ci99": [
+          -0.236,
+          0.501
+        ],
+        "lr_p": 0.0291,
+        "spearman_with_pA": 0.3584,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.6002,
+          "ci95": [
+            0.5456,
+            0.6536
+          ],
+          "ci99": [
+            0.5296,
+            0.6705
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.1509,
+          "ci95": [
+            -0.2127,
+            -0.0911
+          ],
+          "ci99": [
+            -0.2323,
+            -0.0714
+          ]
+        },
+        "firth_coef": 0.133,
+        "firth_ci99": [
+          -0.236,
+          0.501
+        ],
+        "lr_p": 0.0291,
+        "spearman_with_pA": 0.3584,
+        "conveys_beyond_prediction": false
+      },
+      "discriminates_without_prediction": true
+    },
+    "C2": {
+      "auroc": {
+        "est": 0.4926,
+        "ci95": [
+          0.4732,
+          0.5101
+        ],
+        "ci99": [
+          0.4677,
+          0.5171
+        ]
+      },
+      "minus_registered_taxai": {
+        "est": -0.0174,
+        "ci95": [
+          -0.0378,
+          0.0023
+        ],
+        "ci99": [
+          -0.0456,
+          0.0075
+        ]
+      },
+      "max_attainable_auroc": 0.5368,
+      "distribution": {
+        "about right": 383,
+        "too high": 9,
+        "too low": 6,
+        "missing": 2
+      },
+      "about_right_share": 0.9575,
+      "registered_about_right_share": 0.975,
+      "hint_supported": false
+    },
+    "C3": {
+      "auroc": {
+        "est": 0.4563,
+        "ci95": [
+          0.4273,
+          0.4839
+        ],
+        "ci99": [
+          0.4185,
+          0.4924
+        ]
+      },
+      "minus_registered_taxai": {
+        "est": -0.0537,
+        "ci95": [
+          -0.0813,
+          -0.0265
+        ],
+        "ci99": [
+          -0.0911,
+          -0.0191
+        ]
+      },
+      "max_attainable_auroc": 0.5913,
+      "distribution": {
+        "about right": 362,
+        "too high": 27,
+        "too low": 11
+      },
+      "about_right_share": 0.905,
+      "registered_about_right_share": 0.975,
+      "status": "closed",
+      "instruction_dependent": true
+    }
+  },
+  "qwen2.5:32b": {
+    "C1a": {
+      "parse_rate": 1.0,
+      "median_elicited": 0.02,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.6789,
+          "ci95": [
+            0.6261,
+            0.73
+          ],
+          "ci99": [
+            0.6095,
+            0.7466
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.0722,
+          "ci95": [
+            -0.1164,
+            -0.0314
+          ],
+          "ci99": [
+            -0.1289,
+            -0.0187
+          ]
+        },
+        "firth_coef": -0.012,
+        "firth_ci99": [
+          -0.496,
+          0.472
+        ],
+        "lr_p": 0.0671,
+        "spearman_with_pA": 0.7079,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.6789,
+          "ci95": [
+            0.6261,
+            0.73
+          ],
+          "ci99": [
+            0.6095,
+            0.7466
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.0722,
+          "ci95": [
+            -0.1164,
+            -0.0314
+          ],
+          "ci99": [
+            -0.1289,
+            -0.0187
+          ]
+        },
+        "firth_coef": -0.012,
+        "firth_ci99": [
+          -0.496,
+          0.472
+        ],
+        "lr_p": 0.0671,
+        "spearman_with_pA": 0.7079,
+        "conveys_beyond_prediction": false
+      }
+    },
+    "C1b": {
+      "parse_rate": 1.0,
+      "median_elicited": 0.3,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.6331,
+          "ci95": [
+            0.5798,
+            0.6844
+          ],
+          "ci99": [
+            0.5617,
+            0.6991
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.118,
+          "ci95": [
+            -0.1796,
+            -0.0584
+          ],
+          "ci99": [
+            -0.197,
+            -0.041
+          ]
+        },
+        "firth_coef": 0.346,
+        "firth_ci99": [
+          -0.262,
+          0.955
+        ],
+        "lr_p": 0.0236,
+        "spearman_with_pA": 0.3782,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.6331,
+          "ci95": [
+            0.5798,
+            0.6844
+          ],
+          "ci99": [
+            0.5617,
+            0.6991
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.118,
+          "ci95": [
+            -0.1796,
+            -0.0584
+          ],
+          "ci99": [
+            -0.197,
+            -0.041
+          ]
+        },
+        "firth_coef": 0.346,
+        "firth_ci99": [
+          -0.262,
+          0.955
+        ],
+        "lr_p": 0.0236,
+        "spearman_with_pA": 0.3782,
+        "conveys_beyond_prediction": false
+      },
+      "discriminates_without_prediction": true
+    },
+    "C2": {
+      "auroc": {
+        "est": 0.5626,
+        "ci95": [
+          0.5341,
+          0.5916
+        ],
+        "ci99": [
+          0.5256,
+          0.6006
+        ]
+      },
+      "minus_registered_taxai": {
+        "est": 0.0326,
+        "ci95": [
+          0.0045,
+          0.0614
+        ],
+        "ci99": [
+          -0.0044,
+          0.0707
+        ]
+      },
+      "max_attainable_auroc": 0.5966,
+      "distribution": {
+        "about right": 361,
+        "too low": 37,
+        "too high": 2
+      },
+      "about_right_share": 0.9025,
+      "registered_about_right_share": 0.95,
+      "hint_supported": false
+    },
+    "C3": {
+      "auroc": {
+        "est": 0.5125,
+        "ci95": [
+          0.4982,
+          0.5275
+        ],
+        "ci99": [
+          0.4945,
+          0.5325
+        ]
+      },
+      "minus_registered_taxai": {
+        "est": -0.0175,
+        "ci95": [
+          -0.0377,
+          0.0024
+        ],
+        "ci99": [
+          -0.0447,
+          0.0076
+        ]
+      },
+      "max_attainable_auroc": 0.5225,
+      "distribution": {
+        "about right": 391,
+        "too low": 9
+      },
+      "about_right_share": 0.9775,
+      "registered_about_right_share": 0.95,
+      "status": "closed",
+      "instruction_dependent": false
+    }
+  },
+  "qwen2.5:72b-instruct-q3_K_M": {
+    "C1a": {
+      "parse_rate": 1.0,
+      "median_elicited": 0.02,
+      "parsed_cases": {
+        "auroc": {
+          "est": 0.7283,
+          "ci95": [
+            0.6802,
+            0.7753
+          ],
+          "ci99": [
+            0.6647,
+            0.7894
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.0227,
+          "ci95": [
+            -0.0506,
+            0.0049
+          ],
+          "ci99": [
+            -0.0598,
+            0.0134
+          ]
+        },
+        "firth_coef": 0.577,
+        "firth_ci99": [
+          -0.311,
+          1.464
+        ],
+        "lr_p": 0.0258,
+        "spearman_with_pA": 0.8613,
+        "conveys_beyond_prediction": false
+      },
+      "imputed_with_pA": {
+        "auroc": {
+          "est": 0.7283,
+          "ci95": [
+            0.6802,
+            0.7753
+          ],
+          "ci99": [
+            0.6647,
+            0.7894
+          ]
+        },
+        "minus_modelA": {
+          "est": -0.0227,
+          "ci95": [
+            -0.0506,
+            0.0049
+          ],
+          "ci99": [
+            -0.0598,
+            0.0134
+          ]
+        },
+        "firth_coef": 0.577,
+        "firth_ci99": [
+          -0.311,
+          1.464
+        ],
+        "lr_p": 0.0258,
+        "spearman_with_pA": 0.8613,
+        "conveys_beyond_prediction": false
+      }
+    }
+  }
+}

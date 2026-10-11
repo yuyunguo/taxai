@@ -1,0 +1,50 @@
+{
+  "norepinephrine": {
+    "n_test": 6563,
+    "events_test": 54,
+    "prevalence_test": 0.0082,
+    "auroc": {
+      "A": 0.7597,
+      "B": 0.7648,
+      "diff": 0.005,
+      "ci95": [
+        -0.029,
+        0.0399
+      ]
+    },
+    "auprc": {
+      "A": 0.0203,
+      "B": 0.022,
+      "diff": 0.0017,
+      "ci95": [
+        -0.004,
+        0.0119
+      ]
+    },
+    "gate1_open": false
+  },
+  "invasive_ventilation": {
+    "n_test": 4774,
+    "events_test": 119,
+    "prevalence_test": 0.0249,
+    "auroc": {
+      "A": 0.7688,
+      "B": 0.8345,
+      "diff": 0.0657,
+      "ci95": [
+        0.0367,
+        0.0948
+      ]
+    },
+    "auprc": {
+      "A": 0.0919,
+      "B": 0.1382,
+      "diff": 0.0463,
+      "ci95": [
+        0.0003,
+        0.0954
+      ]
+    },
+    "gate1_open": true
+  }
+}

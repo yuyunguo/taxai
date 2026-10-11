@@ -1,0 +1,2134 @@
+{
+  "imv": {
+    "qwen2.5:14b": {
+      "LOW": {
+        "n": 400,
+        "events": 200,
+        "benchmark_pA": {
+          "est": 0.7511,
+          "ci95": [
+            0.7045,
+            0.7953
+          ],
+          "ci99": [
+            0.6933,
+            0.8058
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.7873,
+          "ci95": [
+            0.7405,
+            0.83
+          ],
+          "ci99": [
+            0.7313,
+            0.8369
+          ]
+        },
+        "rule_control": {
+          "est": 0.58,
+          "ci95": [
+            0.5305,
+            0.6272
+          ],
+          "ci99": [
+            0.5187,
+            0.6409
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5347,
+            "ci95": [
+              0.4977,
+              0.5728
+            ],
+            "ci99": [
+              0.4881,
+              0.585
+            ]
+          },
+          "distribution": {
+            "too high": 336,
+            "too low": 63,
+            "about right": 1
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.0025,
+          "mean_score_nonevents": -0.75,
+          "mean_score_events": -0.615
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.4987,
+            "ci95": [
+              0.4593,
+              0.5411
+            ],
+            "ci99": [
+              0.4432,
+              0.5518
+            ]
+          },
+          "distribution": {
+            "too high": 301,
+            "too low": 97,
+            "about right": 2
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.005,
+          "mean_score_nonevents": -0.51,
+          "mean_score_events": -0.51
+        },
+        "taxai_hint": {
+          "auroc": {
+            "est": 0.5072,
+            "ci95": [
+              0.4678,
+              0.547
+            ],
+            "ci99": [
+              0.4549,
+              0.5597
+            ]
+          },
+          "distribution": {
+            "too high": 313,
+            "too low": 66,
+            "about right": 21
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.0525,
+          "mean_score_nonevents": -0.615,
+          "mean_score_events": -0.62
+        },
+        "taxai_minus_static": {
+          "est": -0.036,
+          "ci95": [
+            -0.0777,
+            0.0082
+          ],
+          "ci99": [
+            -0.0882,
+            0.0169
+          ]
+        },
+        "hint_minus_taxai": {
+          "est": 0.0085,
+          "ci95": [
+            -0.0428,
+            0.056
+          ],
+          "ci99": [
+            -0.0565,
+            0.075
+          ]
+        },
+        "incremental_taxai": {
+          "coef": 0.1766,
+          "p": 0.17747479119641896
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.7654,
+            "ci95": [
+              0.6998,
+              0.8299
+            ],
+            "ci99": [
+              0.688,
+              0.844
+            ]
+          },
+          "pB": {
+            "est": 0.7724,
+            "ci95": [
+              0.7101,
+              0.8337
+            ],
+            "ci99": [
+              0.6907,
+              0.8482
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.7604,
+            "ci95": [
+              0.6929,
+              0.8243
+            ],
+            "ci99": [
+              0.6667,
+              0.8399
+            ]
+          },
+          "pB": {
+            "est": 0.8079,
+            "ci95": [
+              0.7444,
+              0.8656
+            ],
+            "ci99": [
+              0.7278,
+              0.8846
+            ]
+          }
+        }
+      },
+      "HIGH": {
+        "n": 116,
+        "events": 58,
+        "benchmark_pA": {
+          "est": 0.5018,
+          "ci95": [
+            0.3982,
+            0.6078
+          ],
+          "ci99": [
+            0.3594,
+            0.6346
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.56,
+          "ci95": [
+            0.4484,
+            0.6617
+          ],
+          "ci99": [
+            0.4102,
+            0.7005
+          ]
+        },
+        "rule_control": {
+          "est": 0.5086,
+          "ci95": [
+            0.4184,
+            0.6004
+          ],
+          "ci99": [
+            0.3873,
+            0.6232
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.569,
+            "ci95": [
+              0.4819,
+              0.6538
+            ],
+            "ci99": [
+              0.453,
+              0.6799
+            ]
+          },
+          "distribution": {
+            "too high": 76,
+            "about right": 40
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.3448,
+          "mean_score_nonevents": -0.7241,
+          "mean_score_events": -0.5862
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.569,
+            "ci95": [
+              0.4832,
+              0.6545
+            ],
+            "ci99": [
+              0.4613,
+              0.6748
+            ]
+          },
+          "distribution": {
+            "too high": 78,
+            "about right": 38
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.3276,
+          "mean_score_nonevents": -0.7414,
+          "mean_score_events": -0.6034
+        },
+        "taxai_hint": {
+          "auroc": {
+            "est": 0.5,
+            "ci95": [
+              0.4092,
+              0.5842
+            ],
+            "ci99": [
+              0.3758,
+              0.6048
+            ]
+          },
+          "distribution": {
+            "too high": 80,
+            "about right": 36
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.3103,
+          "mean_score_nonevents": -0.6897,
+          "mean_score_events": -0.6897
+        },
+        "taxai_minus_static": {
+          "est": 0.0,
+          "ci95": [
+            -0.0958,
+            0.0993
+          ],
+          "ci99": [
+            -0.1328,
+            0.1246
+          ]
+        },
+        "hint_minus_taxai": {
+          "est": -0.069,
+          "ci95": [
+            -0.1804,
+            0.029
+          ],
+          "ci99": [
+            -0.2076,
+            0.0603
+          ]
+        },
+        "incremental_taxai": {
+          "coef": 0.6279,
+          "p": 0.12036278896255126
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.5005,
+            "ci95": [
+              0.3773,
+              0.6121
+            ],
+            "ci99": [
+              0.3468,
+              0.6509
+            ]
+          },
+          "pB": {
+            "est": 0.6015,
+            "ci95": [
+              0.4817,
+              0.7214
+            ],
+            "ci99": [
+              0.4542,
+              0.7435
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.489,
+            "ci95": [
+              0.2637,
+              0.71
+            ],
+            "ci99": [
+              0.2037,
+              0.7824
+            ]
+          },
+          "pB": {
+            "est": 0.4615,
+            "ci95": [
+              0.2252,
+              0.7102
+            ],
+            "ci99": [
+              0.1852,
+              0.7706
+            ]
+          }
+        }
+      },
+      "LOW_excluding_prior_sample": {
+        "static_llm": {
+          "est": 0.5115,
+          "ci95": [
+            0.4745,
+            0.5514
+          ],
+          "ci99": [
+            0.462,
+            0.5623
+          ]
+        },
+        "taxai": {
+          "est": 0.4968,
+          "ci95": [
+            0.447,
+            0.5468
+          ],
+          "ci99": [
+            0.4322,
+            0.5569
+          ]
+        },
+        "taxai_hint": {
+          "est": 0.5145,
+          "ci95": [
+            0.4693,
+            0.5611
+          ],
+          "ci99": [
+            0.4569,
+            0.5691
+          ]
+        }
+      },
+      "gate2_status_taxai": "closed",
+      "gate2_open_taxai_bonferroni": false
+    },
+    "qwen2.5:32b": {
+      "LOW": {
+        "n": 400,
+        "events": 200,
+        "benchmark_pA": {
+          "est": 0.7511,
+          "ci95": [
+            0.7045,
+            0.7953
+          ],
+          "ci99": [
+            0.6933,
+            0.8058
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.7873,
+          "ci95": [
+            0.7405,
+            0.83
+          ],
+          "ci99": [
+            0.7313,
+            0.8369
+          ]
+        },
+        "rule_control": {
+          "est": 0.58,
+          "ci95": [
+            0.5305,
+            0.6272
+          ],
+          "ci99": [
+            0.5187,
+            0.6409
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5125,
+            "ci95": [
+              0.4968,
+              0.5296
+            ],
+            "ci99": [
+              0.493,
+              0.5342
+            ]
+          },
+          "distribution": {
+            "about right": 389,
+            "too low": 11
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.9725,
+          "mean_score_nonevents": 0.015,
+          "mean_score_events": 0.04
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.53,
+            "ci95": [
+              0.5093,
+              0.5512
+            ],
+            "ci99": [
+              0.5023,
+              0.5585
+            ]
+          },
+          "distribution": {
+            "about right": 380,
+            "too low": 20
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.95,
+          "mean_score_nonevents": 0.02,
+          "mean_score_events": 0.08
+        },
+        "taxai_minus_static": {
+          "est": 0.0175,
+          "ci95": [
+            -0.0057,
+            0.0399
+          ],
+          "ci99": [
+            -0.0125,
+            0.0466
+          ]
+        },
+        "incremental_taxai": {
+          "coef": 1.1338,
+          "p": 0.06192919535635362
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.7654,
+            "ci95": [
+              0.6998,
+              0.8299
+            ],
+            "ci99": [
+              0.688,
+              0.844
+            ]
+          },
+          "pB": {
+            "est": 0.7724,
+            "ci95": [
+              0.7101,
+              0.8337
+            ],
+            "ci99": [
+              0.6907,
+              0.8482
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.7604,
+            "ci95": [
+              0.6929,
+              0.8243
+            ],
+            "ci99": [
+              0.6667,
+              0.8399
+            ]
+          },
+          "pB": {
+            "est": 0.8079,
+            "ci95": [
+              0.7444,
+              0.8656
+            ],
+            "ci99": [
+              0.7278,
+              0.8846
+            ]
+          }
+        }
+      },
+      "HIGH": {
+        "n": 116,
+        "events": 58,
+        "benchmark_pA": {
+          "est": 0.5018,
+          "ci95": [
+            0.3982,
+            0.6078
+          ],
+          "ci99": [
+            0.3594,
+            0.6346
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.56,
+          "ci95": [
+            0.4484,
+            0.6617
+          ],
+          "ci99": [
+            0.4102,
+            0.7005
+          ]
+        },
+        "rule_control": {
+          "est": 0.5086,
+          "ci95": [
+            0.4184,
+            0.6004
+          ],
+          "ci99": [
+            0.3873,
+            0.6232
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5172,
+            "ci95": [
+              0.5,
+              0.5462
+            ],
+            "ci99": [
+              0.5,
+              0.5565
+            ]
+          },
+          "distribution": {
+            "about right": 114,
+            "too high": 2
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.9828,
+          "mean_score_nonevents": -0.0345,
+          "mean_score_events": 0.0
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.5086,
+            "ci95": [
+              0.5,
+              0.5294
+            ],
+            "ci99": [
+              0.5,
+              0.5377
+            ]
+          },
+          "distribution": {
+            "about right": 115,
+            "too low": 1
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.9914,
+          "mean_score_nonevents": 0.0,
+          "mean_score_events": 0.0172
+        },
+        "taxai_minus_static": {
+          "est": -0.0086,
+          "ci95": [
+            -0.0385,
+            0.0185
+          ],
+          "ci99": [
+            -0.05,
+            0.0313
+          ]
+        },
+        "incremental_taxai": {
+          "coef": 20.7762,
+          "p": 0.9995616833081354
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.5005,
+            "ci95": [
+              0.3773,
+              0.6121
+            ],
+            "ci99": [
+              0.3468,
+              0.6509
+            ]
+          },
+          "pB": {
+            "est": 0.6015,
+            "ci95": [
+              0.4817,
+              0.7214
+            ],
+            "ci99": [
+              0.4542,
+              0.7435
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.489,
+            "ci95": [
+              0.2637,
+              0.71
+            ],
+            "ci99": [
+              0.2037,
+              0.7824
+            ]
+          },
+          "pB": {
+            "est": 0.4615,
+            "ci95": [
+              0.2252,
+              0.7102
+            ],
+            "ci99": [
+              0.1852,
+              0.7706
+            ]
+          }
+        }
+      },
+      "LOW_excluding_prior_sample": {
+        "static_llm": {
+          "est": 0.5067,
+          "ci95": [
+            0.4916,
+            0.5228
+          ],
+          "ci99": [
+            0.4871,
+            0.5305
+          ]
+        },
+        "taxai": {
+          "est": 0.5219,
+          "ci95": [
+            0.5008,
+            0.5459
+          ],
+          "ci99": [
+            0.4945,
+            0.5557
+          ]
+        }
+      },
+      "gate2_status_taxai": "closed",
+      "gate2_open_taxai_bonferroni": false
+    },
+    "gemma3:27b": {
+      "LOW": {
+        "n": 400,
+        "events": 200,
+        "benchmark_pA": {
+          "est": 0.7511,
+          "ci95": [
+            0.7045,
+            0.7953
+          ],
+          "ci99": [
+            0.6933,
+            0.8058
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.7873,
+          "ci95": [
+            0.7405,
+            0.83
+          ],
+          "ci99": [
+            0.7313,
+            0.8369
+          ]
+        },
+        "rule_control": {
+          "est": 0.58,
+          "ci95": [
+            0.5305,
+            0.6272
+          ],
+          "ci99": [
+            0.5187,
+            0.6409
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5495,
+            "ci95": [
+              0.5063,
+              0.5941
+            ],
+            "ci99": [
+              0.4948,
+              0.6028
+            ]
+          },
+          "distribution": {
+            "about right": 283,
+            "too high": 108,
+            "too low": 9
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.7075,
+          "mean_score_nonevents": -0.3,
+          "mean_score_events": -0.195
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.4901,
+            "ci95": [
+              0.4424,
+              0.538
+            ],
+            "ci99": [
+              0.4324,
+              0.5509
+            ]
+          },
+          "distribution": {
+            "about right": 276,
+            "too high": 122,
+            "too low": 2
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.69,
+          "mean_score_nonevents": -0.29,
+          "mean_score_events": -0.31
+        },
+        "taxai_minus_static": {
+          "est": -0.0594,
+          "ci95": [
+            -0.1177,
+            0.0037
+          ],
+          "ci99": [
+            -0.1339,
+            0.0175
+          ]
+        },
+        "incremental_taxai": {
+          "coef": -0.4176,
+          "p": 0.08001152117376106
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.7654,
+            "ci95": [
+              0.6998,
+              0.8299
+            ],
+            "ci99": [
+              0.688,
+              0.844
+            ]
+          },
+          "pB": {
+            "est": 0.7724,
+            "ci95": [
+              0.7101,
+              0.8337
+            ],
+            "ci99": [
+              0.6907,
+              0.8482
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.7604,
+            "ci95": [
+              0.6929,
+              0.8243
+            ],
+            "ci99": [
+              0.6667,
+              0.8399
+            ]
+          },
+          "pB": {
+            "est": 0.8079,
+            "ci95": [
+              0.7444,
+              0.8656
+            ],
+            "ci99": [
+              0.7278,
+              0.8846
+            ]
+          }
+        }
+      },
+      "HIGH": {
+        "n": 116,
+        "events": 58,
+        "benchmark_pA": {
+          "est": 0.5018,
+          "ci95": [
+            0.3982,
+            0.6078
+          ],
+          "ci99": [
+            0.3594,
+            0.6346
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.56,
+          "ci95": [
+            0.4484,
+            0.6617
+          ],
+          "ci99": [
+            0.4102,
+            0.7005
+          ]
+        },
+        "rule_control": {
+          "est": 0.5086,
+          "ci95": [
+            0.4184,
+            0.6004
+          ],
+          "ci99": [
+            0.3873,
+            0.6232
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5172,
+            "ci95": [
+              0.4373,
+              0.6014
+            ],
+            "ci99": [
+              0.4102,
+              0.6202
+            ]
+          },
+          "distribution": {
+            "about right": 86,
+            "too high": 30
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.7414,
+          "mean_score_nonevents": -0.2759,
+          "mean_score_events": -0.2414
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.569,
+            "ci95": [
+              0.5137,
+              0.6312
+            ],
+            "ci99": [
+              0.4925,
+              0.6555
+            ]
+          },
+          "distribution": {
+            "about right": 102,
+            "too high": 14
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.8793,
+          "mean_score_nonevents": -0.1897,
+          "mean_score_events": -0.0517
+        },
+        "taxai_minus_static": {
+          "est": 0.0517,
+          "ci95": [
+            -0.0494,
+            0.1642
+          ],
+          "ci99": [
+            -0.0786,
+            0.1824
+          ]
+        },
+        "incremental_taxai": {
+          "coef": 1.5086,
+          "p": 0.02836671040913841
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.5005,
+            "ci95": [
+              0.3773,
+              0.6121
+            ],
+            "ci99": [
+              0.3468,
+              0.6509
+            ]
+          },
+          "pB": {
+            "est": 0.6015,
+            "ci95": [
+              0.4817,
+              0.7214
+            ],
+            "ci99": [
+              0.4542,
+              0.7435
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.489,
+            "ci95": [
+              0.2637,
+              0.71
+            ],
+            "ci99": [
+              0.2037,
+              0.7824
+            ]
+          },
+          "pB": {
+            "est": 0.4615,
+            "ci95": [
+              0.2252,
+              0.7102
+            ],
+            "ci99": [
+              0.1852,
+              0.7706
+            ]
+          }
+        }
+      },
+      "LOW_excluding_prior_sample": {
+        "static_llm": {
+          "est": 0.5584,
+          "ci95": [
+            0.5135,
+            0.6051
+          ],
+          "ci99": [
+            0.5002,
+            0.6171
+          ]
+        },
+        "taxai": {
+          "est": 0.4993,
+          "ci95": [
+            0.4548,
+            0.5499
+          ],
+          "ci99": [
+            0.4405,
+            0.5653
+          ]
+        }
+      },
+      "gate2_status_taxai": "closed",
+      "gate2_open_taxai_bonferroni": false
+    },
+    "gpt-oss:20b": {
+      "LOW": {
+        "n": 400,
+        "events": 200,
+        "benchmark_pA": {
+          "est": 0.7511,
+          "ci95": [
+            0.7045,
+            0.7953
+          ],
+          "ci99": [
+            0.6933,
+            0.8058
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.7873,
+          "ci95": [
+            0.7405,
+            0.83
+          ],
+          "ci99": [
+            0.7313,
+            0.8369
+          ]
+        },
+        "rule_control": {
+          "est": 0.58,
+          "ci95": [
+            0.5305,
+            0.6272
+          ],
+          "ci99": [
+            0.5187,
+            0.6409
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5125,
+            "ci95": [
+              0.4972,
+              0.5313
+            ],
+            "ci99": [
+              0.4914,
+              0.5364
+            ]
+          },
+          "distribution": {
+            "about right": 384,
+            "too low": 13,
+            "missing": 3
+          },
+          "missing_rate": 0.0075,
+          "about_right_share": 0.96,
+          "mean_score_nonevents": 0.02,
+          "mean_score_events": 0.045
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.51,
+            "ci95": [
+              0.495,
+              0.5258
+            ],
+            "ci99": [
+              0.4924,
+              0.5293
+            ]
+          },
+          "distribution": {
+            "about right": 388,
+            "too low": 8,
+            "missing": 2,
+            "too high": 2
+          },
+          "missing_rate": 0.005,
+          "about_right_share": 0.97,
+          "mean_score_nonevents": 0.005,
+          "mean_score_events": 0.025
+        },
+        "taxai_minus_static": {
+          "est": -0.0025,
+          "ci95": [
+            -0.0209,
+            0.0174
+          ],
+          "ci99": [
+            -0.0261,
+            0.0226
+          ]
+        },
+        "incremental_taxai": {
+          "coef": 1.5614,
+          "p": 0.05071344651391752
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.7654,
+            "ci95": [
+              0.6998,
+              0.8299
+            ],
+            "ci99": [
+              0.688,
+              0.844
+            ]
+          },
+          "pB": {
+            "est": 0.7724,
+            "ci95": [
+              0.7101,
+              0.8337
+            ],
+            "ci99": [
+              0.6907,
+              0.8482
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.7604,
+            "ci95": [
+              0.6929,
+              0.8243
+            ],
+            "ci99": [
+              0.6667,
+              0.8399
+            ]
+          },
+          "pB": {
+            "est": 0.8079,
+            "ci95": [
+              0.7444,
+              0.8656
+            ],
+            "ci99": [
+              0.7278,
+              0.8846
+            ]
+          }
+        }
+      },
+      "HIGH": {
+        "n": 116,
+        "events": 58,
+        "benchmark_pA": {
+          "est": 0.5018,
+          "ci95": [
+            0.3982,
+            0.6078
+          ],
+          "ci99": [
+            0.3594,
+            0.6346
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.56,
+          "ci95": [
+            0.4484,
+            0.6617
+          ],
+          "ci99": [
+            0.4102,
+            0.7005
+          ]
+        },
+        "rule_control": {
+          "est": 0.5086,
+          "ci95": [
+            0.4184,
+            0.6004
+          ],
+          "ci99": [
+            0.3873,
+            0.6232
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.4831,
+            "ci95": [
+              0.4127,
+              0.5528
+            ],
+            "ci99": [
+              0.3832,
+              0.5724
+            ]
+          },
+          "distribution": {
+            "too high": 94,
+            "about right": 20,
+            "too low": 2
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.1724,
+          "mean_score_nonevents": -0.7759,
+          "mean_score_events": -0.8103
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.4914,
+            "ci95": [
+              0.4197,
+              0.5612
+            ],
+            "ci99": [
+              0.3906,
+              0.583
+            ]
+          },
+          "distribution": {
+            "too high": 95,
+            "about right": 19,
+            "missing": 2
+          },
+          "missing_rate": 0.0172,
+          "about_right_share": 0.1638,
+          "mean_score_nonevents": -0.8103,
+          "mean_score_events": -0.8276
+        },
+        "taxai_minus_static": {
+          "est": 0.0083,
+          "ci95": [
+            -0.0747,
+            0.0869
+          ],
+          "ci99": [
+            -0.1015,
+            0.1167
+          ]
+        },
+        "incremental_taxai": {
+          "coef": -0.08,
+          "p": 0.8691249908810057
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.5005,
+            "ci95": [
+              0.3773,
+              0.6121
+            ],
+            "ci99": [
+              0.3468,
+              0.6509
+            ]
+          },
+          "pB": {
+            "est": 0.6015,
+            "ci95": [
+              0.4817,
+              0.7214
+            ],
+            "ci99": [
+              0.4542,
+              0.7435
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.489,
+            "ci95": [
+              0.2637,
+              0.71
+            ],
+            "ci99": [
+              0.2037,
+              0.7824
+            ]
+          },
+          "pB": {
+            "est": 0.4615,
+            "ci95": [
+              0.2252,
+              0.7102
+            ],
+            "ci99": [
+              0.1852,
+              0.7706
+            ]
+          }
+        }
+      },
+      "LOW_excluding_prior_sample": {
+        "static_llm": {
+          "est": 0.5077,
+          "ci95": [
+            0.4903,
+            0.5263
+          ],
+          "ci99": [
+            0.4865,
+            0.5301
+          ]
+        },
+        "taxai": {
+          "est": 0.5046,
+          "ci95": [
+            0.4915,
+            0.5204
+          ],
+          "ci99": [
+            0.4869,
+            0.5274
+          ]
+        }
+      },
+      "gate2_status_taxai": "closed",
+      "gate2_open_taxai_bonferroni": false
+    },
+    "qwen2.5:72b-instruct-q3_K_M": {
+      "LOW": {
+        "n": 400,
+        "events": 200,
+        "benchmark_pA": {
+          "est": 0.7511,
+          "ci95": [
+            0.7045,
+            0.7953
+          ],
+          "ci99": [
+            0.6933,
+            0.8058
+          ]
+        },
+        "benchmark_pB": {
+          "est": 0.7873,
+          "ci95": [
+            0.7405,
+            0.83
+          ],
+          "ci99": [
+            0.7313,
+            0.8369
+          ]
+        },
+        "rule_control": {
+          "est": 0.58,
+          "ci95": [
+            0.5305,
+            0.6272
+          ],
+          "ci99": [
+            0.5187,
+            0.6409
+          ]
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.5,
+            "ci95": [
+              0.4927,
+              0.5072
+            ],
+            "ci99": [
+              0.49,
+              0.5098
+            ]
+          },
+          "distribution": {
+            "about right": 398,
+            "too low": 2
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.995,
+          "mean_score_nonevents": 0.005,
+          "mean_score_events": 0.005
+        },
+        "incremental_taxai": {
+          "coef": -0.5005,
+          "p": 0.7276430082223719
+        },
+        "benchmarks_val": {
+          "pA": {
+            "est": 0.7654,
+            "ci95": [
+              0.6998,
+              0.8299
+            ],
+            "ci99": [
+              0.688,
+              0.844
+            ]
+          },
+          "pB": {
+            "est": 0.7724,
+            "ci95": [
+              0.7101,
+              0.8337
+            ],
+            "ci99": [
+              0.6907,
+              0.8482
+            ]
+          }
+        },
+        "benchmarks_test": {
+          "pA": {
+            "est": 0.7604,
+            "ci95": [
+              0.6929,
+              0.8243
+            ],
+            "ci99": [
+              0.6667,
+              0.8399
+            ]
+          },
+          "pB": {
+            "est": 0.8079,
+            "ci95": [
+              0.7444,
+              0.8656
+            ],
+            "ci99": [
+              0.7278,
+              0.8846
+            ]
+          }
+        }
+      },
+      "LOW_excluding_prior_sample": {
+        "taxai": {
+          "est": 0.4975,
+          "ci95": [
+            0.4923,
+            0.5
+          ],
+          "ci99": [
+            0.4899,
+            0.5
+          ]
+        }
+      },
+      "gate2_status_taxai": "closed",
+      "gate2_open_taxai_bonferroni": false
+    },
+    "scale_ladder_LOW": {
+      "72B_minus_14B": {
+        "est": 0.0013,
+        "ci95": [
+          -0.041,
+          0.0412
+        ],
+        "ci99": [
+          -0.0552,
+          0.0542
+        ]
+      },
+      "72B_minus_32B": {
+        "est": -0.03,
+        "ci95": [
+          -0.0502,
+          -0.0115
+        ],
+        "ci99": [
+          -0.0574,
+          -0.0046
+        ]
+      }
+    },
+    "rule_control_LOW": {
+      "est": 0.58,
+      "ci95": [
+        0.5305,
+        0.6272
+      ],
+      "ci99": [
+        0.5187,
+        0.6409
+      ]
+    },
+    "H2_instrument_valid": true,
+    "H3_hint_helps": false
+  },
+  "mortality": {
+    "qwen2.5:14b": {
+      "HIGH": {
+        "n": 186,
+        "events": 93,
+        "rule_control": {
+          "est": 0.5323,
+          "ci95": [
+            0.4658,
+            0.6067
+          ],
+          "ci99": [
+            0.455,
+            0.6323
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.4892,
+            "ci95": [
+              0.4245,
+              0.5556
+            ],
+            "ci99": [
+              0.4032,
+              0.5776
+            ]
+          },
+          "distribution": {
+            "about right": 126,
+            "too high": 60
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.6774,
+          "mean_score_nonevents": -0.3118,
+          "mean_score_events": -0.3333
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.5054,
+            "ci95": [
+              0.4327,
+              0.5788
+            ],
+            "ci99": [
+              0.4143,
+              0.5979
+            ]
+          },
+          "distribution": {
+            "too high": 97,
+            "about right": 89
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.4785,
+          "mean_score_nonevents": -0.5269,
+          "mean_score_events": -0.5161
+        },
+        "taxai_minus_static": {
+          "est": 0.0161,
+          "ci95": [
+            -0.0612,
+            0.1026
+          ],
+          "ci99": [
+            -0.0957,
+            0.1344
+          ]
+        }
+      },
+      "LOW": {
+        "n": 46,
+        "events": 23,
+        "rule_control": {
+          "est": 0.5435,
+          "ci95": [
+            0.3942,
+            0.6905
+          ],
+          "ci99": [
+            0.3611,
+            0.7282
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5652,
+            "ci95": [
+              0.48,
+              0.6558
+            ],
+            "ci99": [
+              0.4565,
+              0.6818
+            ]
+          },
+          "distribution": {
+            "too high": 41,
+            "too low": 5
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.0,
+          "mean_score_nonevents": -0.913,
+          "mean_score_events": -0.6522
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.4565,
+            "ci95": [
+              0.3495,
+              0.5511
+            ],
+            "ci99": [
+              0.3234,
+              0.5753
+            ]
+          },
+          "distribution": {
+            "too high": 40,
+            "too low": 6
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.0,
+          "mean_score_nonevents": -0.6522,
+          "mean_score_events": -0.8261
+        },
+        "taxai_minus_static": {
+          "est": -0.1087,
+          "ci95": [
+            -0.2267,
+            0.0
+          ],
+          "ci99": [
+            -0.2728,
+            0.0294
+          ]
+        }
+      }
+    },
+    "qwen2.5:32b": {
+      "HIGH": {
+        "n": 186,
+        "events": 93,
+        "rule_control": {
+          "est": 0.5323,
+          "ci95": [
+            0.4658,
+            0.6067
+          ],
+          "ci99": [
+            0.455,
+            0.6323
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5054,
+            "ci95": [
+              0.4876,
+              0.5253
+            ],
+            "ci99": [
+              0.4813,
+              0.5323
+            ]
+          },
+          "distribution": {
+            "about right": 183,
+            "too high": 3
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.9839,
+          "mean_score_nonevents": -0.0215,
+          "mean_score_events": -0.0108
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.5108,
+            "ci95": [
+              0.5,
+              0.5263
+            ],
+            "ci99": [
+              0.5,
+              0.5321
+            ]
+          },
+          "distribution": {
+            "about right": 184,
+            "too high": 2
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.9892,
+          "mean_score_nonevents": -0.0215,
+          "mean_score_events": 0.0
+        },
+        "taxai_minus_static": {
+          "est": 0.0054,
+          "ci95": [
+            -0.0172,
+            0.0293
+          ],
+          "ci99": [
+            -0.026,
+            0.0362
+          ]
+        }
+      },
+      "LOW": {
+        "n": 46,
+        "events": 23,
+        "rule_control": {
+          "est": 0.5435,
+          "ci95": [
+            0.3942,
+            0.6905
+          ],
+          "ci99": [
+            0.3611,
+            0.7282
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.4783,
+            "ci95": [
+              0.3837,
+              0.5682
+            ],
+            "ci99": [
+              0.3533,
+              0.5862
+            ]
+          },
+          "distribution": {
+            "about right": 41,
+            "too low": 5
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.8913,
+          "mean_score_nonevents": 0.1304,
+          "mean_score_events": 0.087
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.3261,
+            "ci95": [
+              0.2249,
+              0.4314
+            ],
+            "ci99": [
+              0.175,
+              0.4549
+            ]
+          },
+          "distribution": {
+            "about right": 36,
+            "too low": 10
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.7826,
+          "mean_score_nonevents": 0.3913,
+          "mean_score_events": 0.0435
+        },
+        "taxai_minus_static": {
+          "est": -0.1522,
+          "ci95": [
+            -0.2659,
+            -0.0362
+          ],
+          "ci99": [
+            -0.2977,
+            -0.002
+          ]
+        }
+      }
+    },
+    "gemma3:27b": {
+      "HIGH": {
+        "n": 186,
+        "events": 93,
+        "rule_control": {
+          "est": 0.5323,
+          "ci95": [
+            0.4658,
+            0.6067
+          ],
+          "ci99": [
+            0.455,
+            0.6323
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5108,
+            "ci95": [
+              0.4532,
+              0.5645
+            ],
+            "ci99": [
+              0.4419,
+              0.5791
+            ]
+          },
+          "distribution": {
+            "about right": 152,
+            "too high": 34
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.8172,
+          "mean_score_nonevents": -0.1935,
+          "mean_score_events": -0.172
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.5,
+            "ci95": [
+              0.4842,
+              0.5169
+            ],
+            "ci99": [
+              0.4787,
+              0.5213
+            ]
+          },
+          "distribution": {
+            "about right": 184,
+            "too high": 2
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.9892,
+          "mean_score_nonevents": -0.0108,
+          "mean_score_events": -0.0108
+        },
+        "taxai_minus_static": {
+          "est": -0.0108,
+          "ci95": [
+            -0.0652,
+            0.0422
+          ],
+          "ci99": [
+            -0.0809,
+            0.0613
+          ]
+        }
+      },
+      "LOW": {
+        "n": 46,
+        "events": 23,
+        "rule_control": {
+          "est": 0.5435,
+          "ci95": [
+            0.3942,
+            0.6905
+          ],
+          "ci99": [
+            0.3611,
+            0.7282
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.6304,
+            "ci95": [
+              0.5152,
+              0.7392
+            ],
+            "ci99": [
+              0.4678,
+              0.7891
+            ]
+          },
+          "distribution": {
+            "too high": 36,
+            "about right": 10
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.2174,
+          "mean_score_nonevents": -0.913,
+          "mean_score_events": -0.6522
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.4783,
+            "ci95": [
+              0.3598,
+              0.5873
+            ],
+            "ci99": [
+              0.3352,
+              0.6231
+            ]
+          },
+          "distribution": {
+            "about right": 37,
+            "too high": 9
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.8043,
+          "mean_score_nonevents": -0.1739,
+          "mean_score_events": -0.2174
+        },
+        "taxai_minus_static": {
+          "est": -0.1522,
+          "ci95": [
+            -0.3043,
+            0.001
+          ],
+          "ci99": [
+            -0.3478,
+            0.036
+          ]
+        }
+      }
+    },
+    "gpt-oss:20b": {
+      "HIGH": {
+        "n": 186,
+        "events": 93,
+        "rule_control": {
+          "est": 0.5323,
+          "ci95": [
+            0.4658,
+            0.6067
+          ],
+          "ci99": [
+            0.455,
+            0.6323
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5034,
+            "ci95": [
+              0.4351,
+              0.5778
+            ],
+            "ci99": [
+              0.4177,
+              0.6007
+            ]
+          },
+          "distribution": {
+            "about right": 116,
+            "too high": 68,
+            "missing": 1,
+            "too low": 1
+          },
+          "missing_rate": 0.0054,
+          "about_right_share": 0.6237,
+          "mean_score_nonevents": -0.3656,
+          "mean_score_events": -0.3548
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.5538,
+            "ci95": [
+              0.4762,
+              0.6233
+            ],
+            "ci99": [
+              0.4513,
+              0.6445
+            ]
+          },
+          "distribution": {
+            "about right": 97,
+            "too high": 88,
+            "missing": 1
+          },
+          "missing_rate": 0.0054,
+          "about_right_share": 0.5215,
+          "mean_score_nonevents": -0.5269,
+          "mean_score_events": -0.4194
+        },
+        "taxai_minus_static": {
+          "est": 0.0504,
+          "ci95": [
+            -0.033,
+            0.1259
+          ],
+          "ci99": [
+            -0.0577,
+            0.1433
+          ]
+        }
+      },
+      "LOW": {
+        "n": 46,
+        "events": 23,
+        "rule_control": {
+          "est": 0.5435,
+          "ci95": [
+            0.3942,
+            0.6905
+          ],
+          "ci99": [
+            0.3611,
+            0.7282
+          ]
+        },
+        "static_llm": {
+          "auroc": {
+            "est": 0.5416,
+            "ci95": [
+              0.4584,
+              0.629
+            ],
+            "ci99": [
+              0.4286,
+              0.6567
+            ]
+          },
+          "distribution": {
+            "about right": 42,
+            "too low": 3,
+            "too high": 1
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.913,
+          "mean_score_nonevents": 0.0,
+          "mean_score_events": 0.087
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.4981,
+            "ci95": [
+              0.3958,
+              0.6
+            ],
+            "ci99": [
+              0.3611,
+              0.625
+            ]
+          },
+          "distribution": {
+            "about right": 40,
+            "too high": 4,
+            "too low": 2
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.8696,
+          "mean_score_nonevents": -0.0435,
+          "mean_score_events": -0.0435
+        },
+        "taxai_minus_static": {
+          "est": -0.0435,
+          "ci95": [
+            -0.1582,
+            0.0652
+          ],
+          "ci99": [
+            -0.2044,
+            0.104
+          ]
+        }
+      }
+    },
+    "qwen2.5:72b-instruct-q3_K_M": {
+      "HIGH": {
+        "n": 186,
+        "events": 93,
+        "rule_control": {
+          "est": 0.5323,
+          "ci95": [
+            0.4658,
+            0.6067
+          ],
+          "ci99": [
+            0.455,
+            0.6323
+          ]
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.4839,
+            "ci95": [
+              0.4315,
+              0.5333
+            ],
+            "ci99": [
+              0.4169,
+              0.5507
+            ]
+          },
+          "distribution": {
+            "about right": 159,
+            "too high": 27
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 0.8548,
+          "mean_score_nonevents": -0.129,
+          "mean_score_events": -0.1613
+        }
+      },
+      "LOW": {
+        "n": 46,
+        "events": 23,
+        "rule_control": {
+          "est": 0.5435,
+          "ci95": [
+            0.3942,
+            0.6905
+          ],
+          "ci99": [
+            0.3611,
+            0.7282
+          ]
+        },
+        "taxai": {
+          "auroc": {
+            "est": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci99": [
+              0.5,
+              0.5
+            ]
+          },
+          "distribution": {
+            "about right": 46
+          },
+          "missing_rate": 0.0,
+          "about_right_share": 1.0,
+          "mean_score_nonevents": 0.0,
+          "mean_score_events": 0.0
+        }
+      }
+    }
+  },
+  "n_explainers_for_bonferroni": 5
+}

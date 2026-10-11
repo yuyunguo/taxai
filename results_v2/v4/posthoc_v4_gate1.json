@@ -1,0 +1,117 @@
+{
+  "n_value_features": 168,
+  "n_process_features": 48,
+  "P5_ablation_test": {
+    "A+value": {
+      "A": 0.7688,
+      "B": 0.8199,
+      "diff": 0.051,
+      "ci95": [
+        0.0226,
+        0.081
+      ]
+    },
+    "A+process": {
+      "A": 0.7688,
+      "B": 0.8217,
+      "diff": 0.0529,
+      "ci95": [
+        0.0277,
+        0.0778
+      ]
+    },
+    "B": {
+      "A": 0.7688,
+      "B": 0.8345,
+      "diff": 0.0657,
+      "ci95": [
+        0.0367,
+        0.0948
+      ]
+    },
+    "A+permuted": {
+      "A": 0.7688,
+      "B": 0.7452,
+      "diff": -0.0237,
+      "ci95": [
+        -0.0481,
+        -0.0003
+      ]
+    }
+  },
+  "P5_within_strata_test": {
+    "LOW": {
+      "n": 4664,
+      "events": 105,
+      "A": 0.7546,
+      "B": 0.8313,
+      "diff": 0.0767,
+      "ci95": [
+        0.0434,
+        0.1084
+      ]
+    },
+    "HIGH": {
+      "n": 110,
+      "events": 14,
+      "A": 0.6153,
+      "B": 0.5335,
+      "diff": -0.0818,
+      "ci95": [
+        -0.2741,
+        0.135
+      ]
+    }
+  },
+  "P6_model_A": {
+    "threshold": 0.0647,
+    "test_auroc": {
+      "est": 0.7688,
+      "ci95": [
+        0.7279,
+        0.8113
+      ]
+    },
+    "val_auroc": 0.809,
+    "test_calibration": {
+      "intercept": 0.634,
+      "slope": 0.958,
+      "observed": 0.0249,
+      "mean_predicted": 0.0137,
+      "brier": 0.0238
+    },
+    "test_LOW_calibration": {
+      "intercept": 0.69,
+      "slope": 1.12,
+      "observed": 0.0225,
+      "mean_predicted": 0.0115,
+      "brier": 0.0217
+    }
+  },
+  "P7_events": {
+    "n_events": 808,
+    "hours_to_imv_iqr": [
+      3.8,
+      10.2,
+      17.4
+    ],
+    "within_2h": 0.1535,
+    "niv_hfnc_events": 0.1386,
+    "niv_hfnc_nonevents": 0.0428,
+    "limiting_code_events": 8,
+    "limiting_code_nonevents": 1010,
+    "nonevents_death_24h": 254,
+    "nonevents_icu_out_24h": 20014,
+    "n_nonevents": 33684
+  },
+  "P7d_gate1_excluding_limiting_code": {
+    "n_excluded": 1018,
+    "A": 0.7762,
+    "B": 0.8278,
+    "diff": 0.0517,
+    "ci95": [
+      0.0226,
+      0.0818
+    ]
+  }
+}

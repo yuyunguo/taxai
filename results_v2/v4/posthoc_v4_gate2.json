@@ -1,0 +1,417 @@
+{
+  "n": 400,
+  "events": 200,
+  "rule_control": {
+    "est": 0.58,
+    "ci95": [
+      0.5305,
+      0.6272
+    ]
+  },
+  "B_minus_A": {
+    "est": 0.0362,
+    "ci95": [
+      0.0043,
+      0.0683
+    ]
+  },
+  "by_split": {
+    "val": {
+      "n": 212,
+      "events": 99,
+      "pA": 0.7654,
+      "pB": 0.7724,
+      "B_minus_A": {
+        "est": 0.007,
+        "ci95": [
+          -0.0365,
+          0.0516
+        ]
+      },
+      "rule_control": 0.5603
+    },
+    "test": {
+      "n": 188,
+      "events": 101,
+      "pA": 0.7604,
+      "pB": 0.8079,
+      "B_minus_A": {
+        "est": 0.0475,
+        "ci95": [
+          -0.0005,
+          0.0909
+        ]
+      },
+      "rule_control": 0.5937
+    }
+  },
+  "explainers": {
+    "qwen2.5:14b": {
+      "static_llm": {
+        "auroc": 0.5347,
+        "max_attainable_auroc": 0.66,
+        "dissent_rate_events": 0.995,
+        "dissent_rate_nonevents": 1.0,
+        "non_responsive": false,
+        "minus_rule_control": {
+          "est": -0.0453,
+          "ci95": [
+            -0.1021,
+            0.0141
+          ]
+        },
+        "spearman_with_pA": -0.1142,
+        "stratified_auroc_pA_tertiles": 0.5627,
+        "incremental_firth": {
+          "reference": "too high",
+          "pooled_into_reference": [
+            "about right"
+          ],
+          "lr_stat": 12.106,
+          "lr_df": 1,
+          "lr_p": 0.0005,
+          "too_low": {
+            "coef": 0.966,
+            "ci95": [
+              0.341,
+              1.591
+            ]
+          },
+          "added_information": true
+        },
+        "below_positive_control": false
+      },
+      "taxai": {
+        "auroc": 0.4987,
+        "max_attainable_auroc": 0.7475,
+        "dissent_rate_events": 1.0,
+        "dissent_rate_nonevents": 0.99,
+        "non_responsive": false,
+        "minus_rule_control": {
+          "est": -0.0813,
+          "ci95": [
+            -0.1448,
+            -0.0181
+          ]
+        },
+        "spearman_with_pA": -0.1527,
+        "stratified_auroc_pA_tertiles": 0.5305,
+        "incremental_firth": {
+          "reference": "too high",
+          "pooled_into_reference": [
+            "about right"
+          ],
+          "lr_stat": 4.811,
+          "lr_df": 1,
+          "lr_p": 0.0283,
+          "too_low": {
+            "coef": 0.376,
+            "ci95": [
+              -0.136,
+              0.889
+            ]
+          },
+          "added_information": false
+        },
+        "by_split": {
+          "val": 0.5219,
+          "test": 0.4715
+        },
+        "below_positive_control": true
+      },
+      "taxai_hint": {
+        "auroc": 0.5072,
+        "max_attainable_auroc": 0.7175,
+        "dissent_rate_events": 0.92,
+        "dissent_rate_nonevents": 0.975,
+        "non_responsive": false,
+        "minus_rule_control": {
+          "est": -0.0728,
+          "ci95": [
+            -0.1357,
+            -0.0081
+          ]
+        },
+        "spearman_with_pA": -0.1366,
+        "stratified_auroc_pA_tertiles": 0.5375,
+        "incremental_firth": {
+          "reference": "about right",
+          "pooled_into_reference": [],
+          "lr_stat": 6.31,
+          "lr_df": 2,
+          "lr_p": 0.0426,
+          "too_low": {
+            "coef": 0.029,
+            "ci95": [
+              -1.156,
+              1.214
+            ]
+          },
+          "too_high": {
+            "coef": -0.409,
+            "ci95": [
+              -1.463,
+              0.644
+            ]
+          },
+          "added_information": false
+        },
+        "below_positive_control": true
+      }
+    },
+    "qwen2.5:32b": {
+      "static_llm": {
+        "auroc": 0.5125,
+        "max_attainable_auroc": 0.5275,
+        "dissent_rate_events": 0.04,
+        "dissent_rate_nonevents": 0.015,
+        "non_responsive": true,
+        "minus_rule_control": {
+          "est": -0.0675,
+          "ci95": [
+            -0.1183,
+            -0.0124
+          ]
+        },
+        "spearman_with_pA": 0.0547,
+        "stratified_auroc_pA_tertiles": 0.5104,
+        "incremental_firth": {
+          "reference": "about right",
+          "pooled_into_reference": [],
+          "lr_stat": 2.223,
+          "lr_df": 1,
+          "lr_p": 0.136,
+          "too_low": {
+            "coef": 0.884,
+            "ci95": [
+              -0.614,
+              2.381
+            ]
+          },
+          "added_information": false
+        },
+        "below_positive_control": true
+      },
+      "taxai": {
+        "auroc": 0.53,
+        "max_attainable_auroc": 0.55,
+        "dissent_rate_events": 0.08,
+        "dissent_rate_nonevents": 0.02,
+        "non_responsive": true,
+        "minus_rule_control": {
+          "est": -0.05,
+          "ci95": [
+            -0.1004,
+            0.0009
+          ]
+        },
+        "spearman_with_pA": 0.1218,
+        "stratified_auroc_pA_tertiles": 0.5254,
+        "incremental_firth": {
+          "reference": "about right",
+          "pooled_into_reference": [],
+          "lr_stat": 5.033,
+          "lr_df": 1,
+          "lr_p": 0.0249,
+          "too_low": {
+            "coef": 1.051,
+            "ci95": [
+              -0.115,
+              2.218
+            ]
+          },
+          "added_information": false
+        },
+        "by_split": {
+          "val": 0.5278,
+          "test": 0.5347
+        },
+        "below_positive_control": false
+      }
+    },
+    "qwen2.5:72b-instruct-q3_K_M": {
+      "taxai": {
+        "auroc": 0.5,
+        "max_attainable_auroc": 0.505,
+        "dissent_rate_events": 0.005,
+        "dissent_rate_nonevents": 0.005,
+        "non_responsive": true,
+        "minus_rule_control": {
+          "est": -0.08,
+          "ci95": [
+            -0.1283,
+            -0.0301
+          ]
+        },
+        "spearman_with_pA": 0.0338,
+        "stratified_auroc_pA_tertiles": 0.4986,
+        "incremental_firth": {
+          "reference": "about right",
+          "pooled_into_reference": [
+            "too low"
+          ],
+          "lr_stat": 0.0,
+          "lr_df": 0,
+          "lr_p": null,
+          "added_information": false
+        },
+        "by_split": {
+          "val": 0.4956,
+          "test": 0.505
+        },
+        "below_positive_control": true
+      }
+    },
+    "gemma3:27b": {
+      "static_llm": {
+        "auroc": 0.5495,
+        "max_attainable_auroc": 0.7803,
+        "dissent_rate_events": 0.255,
+        "dissent_rate_nonevents": 0.33,
+        "non_responsive": false,
+        "minus_rule_control": {
+          "est": -0.0305,
+          "ci95": [
+            -0.0971,
+            0.0326
+          ]
+        },
+        "spearman_with_pA": 0.149,
+        "stratified_auroc_pA_tertiles": 0.5269,
+        "incremental_firth": {
+          "reference": "about right",
+          "pooled_into_reference": [],
+          "lr_stat": 4.511,
+          "lr_df": 2,
+          "lr_p": 0.1048,
+          "too_low": {
+            "coef": 0.391,
+            "ci95": [
+              -1.104,
+              1.885
+            ]
+          },
+          "too_high": {
+            "coef": -0.216,
+            "ci95": [
+              -0.709,
+              0.276
+            ]
+          },
+          "added_information": false
+        },
+        "below_positive_control": false
+      },
+      "taxai": {
+        "auroc": 0.4901,
+        "max_attainable_auroc": 0.807,
+        "dissent_rate_events": 0.32,
+        "dissent_rate_nonevents": 0.3,
+        "non_responsive": false,
+        "minus_rule_control": {
+          "est": -0.09,
+          "ci95": [
+            -0.1551,
+            -0.0199
+          ]
+        },
+        "spearman_with_pA": 0.1515,
+        "stratified_auroc_pA_tertiles": 0.4535,
+        "incremental_firth": {
+          "reference": "about right",
+          "pooled_into_reference": [
+            "too low"
+          ],
+          "lr_stat": 5.873,
+          "lr_df": 1,
+          "lr_p": 0.0154,
+          "too_high": {
+            "coef": 0.418,
+            "ci95": [
+              -0.058,
+              0.895
+            ]
+          },
+          "added_information": false
+        },
+        "by_split": {
+          "val": 0.5282,
+          "test": 0.449
+        },
+        "below_positive_control": true
+      }
+    },
+    "gpt-oss:20b": {
+      "static_llm": {
+        "auroc": 0.5125,
+        "max_attainable_auroc": 0.5325,
+        "dissent_rate_events": 0.055,
+        "dissent_rate_nonevents": 0.025,
+        "non_responsive": true,
+        "minus_rule_control": {
+          "est": -0.0675,
+          "ci95": [
+            -0.1188,
+            -0.0147
+          ]
+        },
+        "spearman_with_pA": 0.1318,
+        "stratified_auroc_pA_tertiles": 0.5047,
+        "incremental_firth": {
+          "reference": "about right",
+          "pooled_into_reference": [],
+          "lr_stat": 1.003,
+          "lr_df": 1,
+          "lr_p": 0.3166,
+          "too_low": {
+            "coef": 0.157,
+            "ci95": [
+              -1.094,
+              1.409
+            ]
+          },
+          "added_information": false
+        },
+        "below_positive_control": true
+      },
+      "taxai": {
+        "auroc": 0.51,
+        "max_attainable_auroc": 0.5248,
+        "dissent_rate_events": 0.055,
+        "dissent_rate_nonevents": 0.005,
+        "non_responsive": true,
+        "minus_rule_control": {
+          "est": -0.07,
+          "ci95": [
+            -0.1177,
+            -0.02
+          ]
+        },
+        "spearman_with_pA": -0.0451,
+        "stratified_auroc_pA_tertiles": 0.5134,
+        "incremental_firth": {
+          "reference": "about right",
+          "pooled_into_reference": [
+            "too high"
+          ],
+          "lr_stat": 6.656,
+          "lr_df": 1,
+          "lr_p": 0.0099,
+          "too_low": {
+            "coef": 2.302,
+            "ci95": [
+              0.172,
+              4.432
+            ]
+          },
+          "added_information": true
+        },
+        "by_split": {
+          "val": 0.5057,
+          "test": 0.5149
+        },
+        "below_positive_control": true
+      }
+    }
+  }
+}
