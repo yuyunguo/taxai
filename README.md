@@ -74,7 +74,7 @@ bash src/pipeline_v2/run_tierC.sh
 MAC_OLLAMA_HOST=http://<host>:11434 bash src/pipeline_v2/run_tierC_mac.sh
 python -m src.pipeline_v2.tierC_v4_boot10k
 
-# 7. Figures and tables (aggregate results only)
+# 7. Figures 1-4 and tables (aggregate results only)
 python scripts/gen_figures_v4.py
 python scripts/gen_posthoc_tables.py
 python scripts/gen_supp_note2.py

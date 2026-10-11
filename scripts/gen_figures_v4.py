@@ -6,8 +6,13 @@ Figure 2 (main): a, Gate 1 dAUROC (model B - model A) for three outcomes;
 b, Gate 2 verdict AUROC in ventilation LOW per explainer, with the rule
 control and model benchmarks. Panel b reads results_v2/v4/gate2_v4.json and
 is drawn as "pending" until the registered runs finish.
+Figure 2c: readout capacity, observed verdict AUROC against the highest AUROC
+attainable from each explainer's verdict counts (results_v2/v4/posthoc_v4_gate2.json).
 Figure 3 (failure modes, H4): verdict composition by outcome per explainer,
 from results_v2/v4/h4_verdict_counts.json (aggregate counts only).
+Figure 4 (pre-specified addendum): a, AUROC by readout per explainer (verdict,
+probability with the prediction shown, probability with it hidden); b, anchoring,
+AUROC against the Spearman correlation with model A (results_v2/v4/tierC_v4.json).
 
 Usage:
     python scripts/gen_figures_v4.py
@@ -92,7 +97,11 @@ def _gate2_rows(res: Dict[str, object]) -> List[Tuple[str, float, float, float, 
 
 
 def figure2() -> None:
-    fig, (a, b) = plt.subplots(1, 2, figsize=(7.2, 2.6), dpi=300, gridspec_kw={"width_ratios": [1, 1.25]})
+    fig = plt.figure(figsize=(7.2, 4.6), dpi=300)
+    gs = fig.add_gridspec(2, 2, height_ratios=[0.8, 1.6], width_ratios=[1.45, 1], hspace=0.55, wspace=0.06)
+    a = fig.add_subplot(gs[0, :])
+    b = fig.add_subplot(gs[1, 0])
+    c = fig.add_subplot(gs[1, 1], sharey=b)
     rows = _gate1_rows()
     for i, (label, d, lo, hi) in enumerate(rows):
         color = GREEN if lo > 0 and d >= 0.010 else GREY
@@ -106,7 +115,7 @@ def figure2() -> None:
     a.tick_params(labelsize=6)
 
     path = RES / "v4" / "gate2_v4.json"
-    b.set_title("b  Explainer ceiling (Gate 2), ventilation LOW", loc="left", fontsize=8.5, weight="bold")
+    b.set_title("b  Explainer ceiling (Gate 2)", loc="left", fontsize=8.5, weight="bold")
     b.axvspan(0.3, 0.60, color="#F3F3F3", zorder=0)
     b.axvline(0.5, color="black", lw=0.6)
     b.axvline(0.60, color=RED, lw=0.6, ls="--")
@@ -130,9 +139,31 @@ def figure2() -> None:
             x = ref[key]["est"]
             b.axvline(x, color=GREY, lw=0.8, ls=ls)
             b.text(x + dx, -0.65, f"{label} {x:.2f}", fontsize=6.5, color=GREY, ha=ha, va="center")
-    fig.tight_layout()
+        _capacity_panel(c, g2)
     fig.savefig(OUT / "fig2_two_ceilings_evidence.png", bbox_inches="tight", dpi=600)
     plt.close(fig)
+
+
+def _capacity_panel(c: "plt.Axes", g2: List[Tuple[str, float, float, float, str]]) -> None:
+    """Fig. 2c: observed verdict AUROC against the maximum attainable from the verdict counts."""
+    ph = json.load(open(RES / "v4" / "posthoc_v4_gate2.json"))["explainers"]
+    keys = {label: key for key, label in EXPLAINERS}
+    c.set_title("c  Readout capacity", loc="left", fontsize=8.5, weight="bold")
+    c.axvline(0.5, color="black", lw=0.6)
+    c.axvline(0.60, color=RED, lw=0.6, ls="--")
+    c.text(0.61, -0.65, "0.60 threshold", fontsize=6.5, color=RED, ha="left", va="center")
+    for i, (label, est, _, _, status) in enumerate(g2):
+        if label not in keys:
+            continue
+        mx = ph[keys[label]]["taxai"]["max_attainable_auroc"]
+        c.plot([est, mx], [i, i], color=GREY, lw=1.0, zorder=1)
+        c.plot(mx, i, marker="|", color="black", ms=7, mew=1.2, zorder=2)
+        c.plot(est, i, "o", color=RED, ms=4, zorder=3)
+        c.text(mx + 0.015, i, f"{mx:.2f}", fontsize=6.5, va="center")
+    c.set_xlim(0.45, 0.95)
+    c.tick_params(axis="y", labelleft=False)
+    c.set_xlabel("AUROC: observed (dot), maximum (bar)", fontsize=7.5)
+    c.tick_params(labelsize=6)
 
 
 def figure3() -> None:
@@ -147,9 +178,12 @@ def figure3() -> None:
             ("gpt-oss:20b", "taxai", "gpt-oss:20b"), ("qwen2.5:72b-instruct-q3_K_M", "taxai", "qwen2.5:72b")]
     cats = (("too low", GREEN, "too low (would rank ventilated patients higher)"), ("about right", "#D9D9D9", "about right"),
             ("too high", RED, "too high"), ("missing", "white", "missing"))
+    g2 = json.load(open(RES / "v4" / "gate2_v4.json"))["imv"]
     fig, ax = plt.subplots(figsize=(7.2, 3.0), dpi=300)
     ylabels, y = [], 0.0
     for model, cond, label in rows:
+        auc = g2[model]["LOW"][cond]["auroc"]["est"]
+        label = f"{label} (AUROC {auc:.2f})"
         c = counts[f"{model}|LOW|{cond}"]
         for outcome, tag in (("1", "ventilated"), ("0", "not ventilated")):
             n = sum(c[outcome].values())
@@ -176,10 +210,74 @@ def figure3() -> None:
     plt.close(fig)
 
 
+def figure4() -> None:
+    """Pre-specified addendum: readouts and anchoring (ventilation, LOW labels)."""
+    path = RES / "v4" / "tierC_v4.json"
+    if not path.exists():
+        logger.warning(f"{path} missing; Figure 4 skipped")
+        return
+    tc = json.load(open(path))
+    g2 = json.load(open(RES / "v4" / "gate2_v4.json"))["imv"]
+    ref = g2["qwen2.5:14b"]["LOW"]
+    pa, pb = ref["benchmark_pA"]["est"], ref["benchmark_pB"]["est"]
+    fig, (a, b) = plt.subplots(1, 2, figsize=(7.2, 2.8), dpi=300, gridspec_kw={"width_ratios": [1.25, 1]})
+    readouts = (("verdict", "Verdict (registered)", RED, "o"),
+                ("C1a", "Probability, prediction shown", BLUE, "s"),
+                ("C1b", "Probability, prediction hidden", GREEN, "D"))
+    for i, (key, label) in enumerate(EXPLAINERS):
+        for j, (r, _, color, marker) in enumerate(readouts):
+            if r == "verdict":
+                au = g2[key]["LOW"]["taxai"]["auroc"]
+            elif r in tc[key]:
+                au = tc[key][r]["parsed_cases"]["auroc"]
+            else:
+                continue
+            y = i + (j - 1) * 0.22
+            a.errorbar(au["est"], y, xerr=[[au["est"] - au["ci95"][0]], [au["ci95"][1] - au["est"]]],
+                       fmt=marker, color=color, ms=3.5, capsize=1.5, lw=0.9)
+    a.axvline(0.5, color="black", lw=0.6)
+    for x, label, ls in ((pa, "model A", ":"), (pb, "model B", "-.")):
+        a.axvline(x, color=GREY, lw=0.8, ls=ls)
+        dx, ha = (-0.005, "right") if label == "model A" else (0.005, "left")
+        a.text(x + dx, -0.7, f"{label} {x:.2f}", fontsize=6.5, color=GREY, ha=ha, va="center")
+    a.set_yticks(range(len(EXPLAINERS)), [lab for _, lab in EXPLAINERS], fontsize=7.5)
+    a.set_ylim(len(EXPLAINERS) - 0.5, -1.0)
+    a.set_xlim(0.35, 0.95)
+    a.set_xlabel("AUROC for the event (95% CI)", fontsize=7.5)
+    a.tick_params(labelsize=6)
+    a.set_title("a  Readouts", loc="left", fontsize=8.5, weight="bold")
+    handles = [plt.Line2D([], [], color=c, marker=m, ls="", ms=4) for _, _, c, m in readouts]
+    fig.legend(handles, [lab for _, lab, _, _ in readouts], fontsize=7, frameon=False, ncol=3,
+               loc="upper center", bbox_to_anchor=(0.5, 1.07))
+
+    for key, label in EXPLAINERS:
+        for r, color, marker in (("C1a", BLUE, "s"), ("C1b", GREEN, "D")):
+            if r not in tc[key]:
+                continue
+            pc = tc[key][r]["parsed_cases"]
+            b.plot(pc["spearman_with_pA"], pc["auroc"]["est"], marker=marker, color=color, ms=4, ls="")
+            if r == "C1a":
+                b.annotate(label, (pc["spearman_with_pA"], pc["auroc"]["est"]), fontsize=6.5,
+                           xytext=(4, -2), textcoords="offset points")
+    b.axhline(pa, color=GREY, lw=0.8, ls=":")
+    b.text(-0.28, pa + 0.004, f"model A {pa:.2f}", fontsize=6.5, color=GREY, va="bottom")
+    b.axhline(0.5, color="black", lw=0.6)
+    b.set_xlim(-0.3, 1.3)
+    b.set_ylim(0.45, 0.8)
+    b.set_xlabel("Spearman correlation with model A's probability", fontsize=7.5)
+    b.set_ylabel("AUROC", fontsize=7.5)
+    b.tick_params(labelsize=6)
+    b.set_title("b  Anchoring on the prediction", loc="left", fontsize=8.5, weight="bold")
+    fig.subplots_adjust(wspace=0.3)
+    fig.savefig(OUT / "fig4_addendum_readouts.png", bbox_inches="tight", dpi=600)
+    plt.close(fig)
+
+
 def main() -> None:
     figure1()
     figure2()
     figure3()
+    figure4()
     logger.info(f"Figures written to {OUT}/")
 
 
