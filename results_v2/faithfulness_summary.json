@@ -1,0 +1,35 @@
+{
+  "random": {
+    "explanations": 500,
+    "with_claims": 500,
+    "claims": 17437,
+    "supported": 2286,
+    "pooled_rate": 0.1311,
+    "mean_rate": 0.13,
+    "frac_with_any_unsupported": 1.0
+  },
+  "static_llm": {
+    "explanations": 500,
+    "with_claims": 477,
+    "claims": 3128,
+    "supported": 3058,
+    "pooled_rate": 0.9776,
+    "mean_rate": 0.9776,
+    "frac_with_any_unsupported": 0.0608
+  },
+  "taxai": {
+    "explanations": 500,
+    "with_claims": 497,
+    "claims": 3455,
+    "supported": 3452,
+    "pooled_rate": 0.9991,
+    "mean_rate": 0.999,
+    "frac_with_any_unsupported": 0.006
+  },
+  "H4_taxai_vs_static": {
+    "n_pairs": 476,
+    "mean_diff": 0.0194,
+    "median_diff": 0.0,
+    "p_wilcoxon": 9.312755133222276e-06
+  }
+}

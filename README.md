@@ -10,10 +10,10 @@ Code, analysis plans, and aggregate results for:
 
 ## What the audit measures
 
-An explanation can improve a clinician's judgment of a risk prediction only if two conditions hold. Both are measured here before any reader is involved.
+An explanation can improve a reader's discrimination of right from wrong predictions only if two conditions hold. Both are measured here before any reader is involved. (A closed gate limits this conclusion: explanations could still affect calibration, trust, or reliance in other ways.)
 
-1. **Information ceiling (Gate 1).** The patient's trajectory must hold outcome information that the prediction has not used. This is tested by comparing model A (209 aggregate features) with model B (model A plus 216 trajectory-dynamics features).
-2. **Explainer ceiling (Gate 2).** The explainer's verdict on the prediction ("too high / about right / too low") must discriminate outcomes among patients with the same risk label. A rule-based positive control checks that the audit can register signal.
+1. **Information ceiling (Gate 1).** Whether a specified representation of the trajectory (its dynamics features) provides recoverable outcome information beyond the risk model's aggregates — tested by comparing model A (209 aggregate features) with model B (model A plus 216 trajectory-dynamics features). A closed gate means these features recovered no such information, not that none exists.
+2. **Explainer ceiling (Gate 2).** Whether the verdict of a specified explainer, under a specified instruction ("too high / about right / too low"), discriminates outcomes within a prediction-label stratum. A rule-based positive control checks that the audit can register signal. Verdict discrimination is a screening necessary condition; an open gate still requires a test of incremental information conditional on the base model's probability.
 
 ## Data access
 

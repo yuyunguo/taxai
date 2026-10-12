@@ -1,0 +1,11 @@
+{
+ "description": "Post hoc power for registered H3 (qwen2.5:14b hint minus TAXAI, paired AUROC difference), from the registered 95% CI; normal approximation, two-sided alpha 0.05.",
+ "diff_est": 0.009,
+ "ci95": [
+  -0.043,
+  0.056
+ ],
+ "se": 0.0253,
+ "mde_80pct_power": 0.0708,
+ "mde_90pct_power": 0.0819
+}

@@ -1,0 +1,131 @@
+{
+  "n_cases": 500,
+  "parse_rate": 1.0,
+  "pre": {
+    "brier": 0.1455,
+    "auroc": 0.872
+  },
+  "by_method": {
+    "empty": {
+      "n": 500,
+      "dBrier": 0.00011,
+      "post_brier": 0.1456,
+      "post_auroc": 0.8713,
+      "mean_abs_shift": 0.0018,
+      "toward_rate": 0.002,
+      "BAR_derived": 0.5004
+    },
+    "random": {
+      "n": 500,
+      "dBrier": 0.06228,
+      "post_brier": 0.2078,
+      "post_auroc": 0.7664,
+      "mean_abs_shift": 0.1527,
+      "toward_rate": 0.14,
+      "BAR_derived": 0.5542
+    },
+    "shap": {
+      "n": 500,
+      "dBrier": 6e-05,
+      "post_brier": 0.1455,
+      "post_auroc": 0.871,
+      "mean_abs_shift": 0.0137,
+      "toward_rate": 0.006,
+      "BAR_derived": 0.503
+    },
+    "static_llm": {
+      "n": 500,
+      "dBrier": 0.01067,
+      "post_brier": 0.1562,
+      "post_auroc": 0.8562,
+      "mean_abs_shift": 0.0597,
+      "toward_rate": 0.084,
+      "BAR_derived": 0.5123
+    },
+    "taxai": {
+      "n": 500,
+      "dBrier": 0.01428,
+      "post_brier": 0.1598,
+      "post_auroc": 0.8528,
+      "mean_abs_shift": 0.0686,
+      "toward_rate": 0.116,
+      "BAR_derived": 0.5459
+    }
+  },
+  "H1_primary": {
+    "n_pairs": 500,
+    "diff": 0.00361,
+    "ci95": [
+      -0.00089,
+      0.00825
+    ],
+    "p": 0.112
+  },
+  "secondary": {
+    "S1_dBrier_vs_empty": {
+      "diff": 0.01417,
+      "ci95": [
+        0.00708,
+        0.02081
+      ],
+      "p": 0.0005,
+      "p_bonf": 0.004
+    },
+    "S2_dBrier_vs_random": {
+      "diff": -0.048,
+      "ci95": [
+        -0.0624,
+        -0.03367
+      ],
+      "p": 0.0005,
+      "p_bonf": 0.004
+    },
+    "S3_dBrier_vs_shap": {
+      "diff": 0.01422,
+      "ci95": [
+        0.0072,
+        0.02109
+      ],
+      "p": 0.0005,
+      "p_bonf": 0.004
+    },
+    "S4_post_auroc_vs_static": {
+      "diff": -0.00339,
+      "ci95": [
+        -0.01455,
+        0.00737
+      ],
+      "p": 0.55,
+      "p_bonf": 1.0
+    },
+    "S5_toward_vs_static": {
+      "diff": 0.032,
+      "p": 0.0061698993205441645,
+      "p_bonf": 0.049359194564353316
+    },
+    "S6_BAR_vs_static": {
+      "diff": 0.03358,
+      "ci95": [
+        0.00524,
+        0.065
+      ],
+      "p": 0.019,
+      "p_bonf": 0.152
+    },
+    "S7_temporal_claims_vs_static": {
+      "taxai_mean": 0.766,
+      "static_mean": 0.0,
+      "p": 9.696036541311632e-29,
+      "p_bonf": 7.756829233049306e-28
+    },
+    "S8_mediation_temporal_claims": {
+      "coef": 0.001061,
+      "ci95": [
+        -0.004501,
+        0.006624
+      ],
+      "p": 0.7084771670616388,
+      "p_bonf": 1.0
+    }
+  }
+}

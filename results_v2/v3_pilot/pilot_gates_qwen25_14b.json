@@ -1,0 +1,41 @@
+{
+  "G1_input_contrast_median": {
+    "value": 73.5,
+    "pass": true
+  },
+  "G2_parse_rate": {
+    "value": 1.0,
+    "pass": true
+  },
+  "G3_pre_sd": {
+    "value": 0.2862,
+    "pass": true,
+    "pre_auroc_reported": 0.8
+  },
+  "G4_max_prompt_tokens_est": {
+    "value": 2499,
+    "pass": true
+  },
+  "descriptive": {
+    "n_cases": 40,
+    "mean_abs_shift_by_method": {
+      "empty": 0.0057,
+      "random": 0.1628,
+      "shap": 0.0155,
+      "static_llm": 0.0586,
+      "taxai": 0.0665
+    },
+    "generator_verdicts": {
+      "static_llm": {
+        "too high": 24,
+        "about right": 12,
+        "too low": 4
+      },
+      "taxai": {
+        "too high": 27,
+        "about right": 8,
+        "too low": 5
+      }
+    }
+  }
+}

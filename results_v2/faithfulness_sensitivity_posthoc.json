@@ -1,0 +1,9 @@
+{
+  "note": "post-hoc sensitivity: unit-exponent tokens removed before parsing",
+  "pooled": {
+    "static_llm": 0.9954,
+    "taxai": 0.9991
+  },
+  "p_wilcoxon": 0.09084104156133044,
+  "n_pairs": 476
+}

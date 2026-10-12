@@ -55,18 +55,18 @@ def figure1() -> None:
 
     box(0.05, 2.0, 1.5, 1.3, "Patient\ntrajectory\n+ model\nprediction", "#F2F2F2", fs=6.9, weight="bold")
     box(2.0, 2.75, 3.0, 0.65, "Information ceiling (Gate 1)", "#FBE9E7", ec=RED, fs=7.4, weight="bold")
-    box(2.0, 1.85, 3.0, 0.8, "Does the trajectory hold\noutcome information the\nprediction has not used?", "white", fs=6.0)
+    box(2.0, 1.85, 3.0, 0.8, "Does a trajectory representation\nadd recoverable information\nthe prediction has not used?", "white", fs=6.0)
     box(2.0, 1.05, 3.0, 0.7, "Test (no LLM): model A vs. model B\n(+ trajectory dynamics), ΔAUROC", "#F7F7F7", ec=GREY, fs=6.1)
     box(5.5, 2.75, 3.0, 0.65, "Explainer ceiling (Gate 2)", "#FBE9E7", ec=RED, fs=7.4, weight="bold")
     box(5.5, 1.85, 3.0, 0.8, "Does the explainer's verdict\nseparate right from\nwrong predictions?", "white", fs=6.0)
     box(5.5, 1.05, 3.0, 0.7, "Test (no reader): verdict AUROC\nwithin label strata", "#F7F7F7", ec=GREY, fs=6.1)
     box(5.5, 0.0, 3.0, 0.95, "Positive control: rule explainer,\nsign(pB − pA)\nGiven-signal test: LLM given\nmodel B's estimate (hint)",
         "#E8F0F8", ec=BLUE, fs=6.2)
-    box(9.0, 2.0, 0.95, 1.3, "Worth a\nreader\nstudy", "#E8F4EA", fs=6.9, weight="bold")
+    box(9.0, 2.0, 0.95, 1.3, "Proceed to\nreader\nevaluation", "#E8F4EA", fs=6.9, weight="bold")
     arrow(1.55, 2.65, 2.0, 2.65)
     arrow(5.0, 2.65, 5.5, 2.65)
     arrow(8.5, 2.65, 9.0, 2.65)
-    ax.text(5.25, 3.75, "Both ceilings must be open before an explanation can improve a reader's judgment",
+    ax.text(5.25, 3.75, "Both ceilings must be open for an explanation to improve discrimination of prediction errors",
             ha="center", fontsize=7.8, style="italic")
     OUT.mkdir(exist_ok=True)
     fig.savefig(OUT / "fig1_two_ceilings.png", bbox_inches="tight", dpi=600)

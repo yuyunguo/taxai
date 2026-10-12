@@ -1,0 +1,5 @@
+{
+  "description": "AUROC of model A's predicted probability for in-hospital death in the 500-case reader-analysis sample (aggregate; computed 2026-10-10 on the workstation from data_v2/v3/main/per_case_qwen25_14b.csv, unique hadm_id).",
+  "n": 500,
+  "model_A_auroc": 0.8755
+}

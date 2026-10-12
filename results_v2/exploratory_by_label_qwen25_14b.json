@@ -1,0 +1,114 @@
+{
+  "HIGH": {
+    "empty": {
+      "BAR": 0.5,
+      "ci95": [
+        0.5,
+        0.5
+      ],
+      "accept_if_correct": 0.0,
+      "accept_if_wrong": 0.0
+    },
+    "random": {
+      "BAR": 0.5127,
+      "ci95": [
+        0.503,
+        0.526
+      ],
+      "accept_if_correct": 0.0255,
+      "accept_if_wrong": 0.0
+    },
+    "shap": {
+      "BAR": 0.4988,
+      "ci95": [
+        0.4798,
+        0.5159
+      ],
+      "accept_if_correct": 0.0191,
+      "accept_if_wrong": 0.0215
+    },
+    "static_llm": {
+      "BAR": 0.5372,
+      "ci95": [
+        0.4753,
+        0.5986
+      ],
+      "accept_if_correct": 0.4076,
+      "accept_if_wrong": 0.3333
+    },
+    "taxai": {
+      "BAR": 0.5515,
+      "ci95": [
+        0.4932,
+        0.6062
+      ],
+      "accept_if_correct": 0.3503,
+      "accept_if_wrong": 0.2473
+    },
+    "taxai_minus_static": {
+      "diff": 0.0143,
+      "ci95": [
+        -0.0491,
+        0.0803
+      ]
+    },
+    "n_correct": 157,
+    "n_wrong": 93
+  },
+  "LOW": {
+    "empty": {
+      "BAR": 0.5179,
+      "ci95": [
+        0.4646,
+        0.5536
+      ],
+      "accept_if_correct": 0.0793,
+      "accept_if_wrong": 0.0435
+    },
+    "random": {
+      "BAR": 0.5044,
+      "ci95": [
+        0.5,
+        0.5111
+      ],
+      "accept_if_correct": 0.0088,
+      "accept_if_wrong": 0.0
+    },
+    "shap": {
+      "BAR": 0.5463,
+      "ci95": [
+        0.5285,
+        0.5656
+      ],
+      "accept_if_correct": 0.0925,
+      "accept_if_wrong": 0.0
+    },
+    "static_llm": {
+      "BAR": 0.5374,
+      "ci95": [
+        0.5211,
+        0.5548
+      ],
+      "accept_if_correct": 0.0749,
+      "accept_if_wrong": 0.0
+    },
+    "taxai": {
+      "BAR": 0.5289,
+      "ci95": [
+        0.4735,
+        0.5665
+      ],
+      "accept_if_correct": 0.1013,
+      "accept_if_wrong": 0.0435
+    },
+    "taxai_minus_static": {
+      "diff": -0.0085,
+      "ci95": [
+        -0.0651,
+        0.0285
+      ]
+    },
+    "n_correct": 227,
+    "n_wrong": 23
+  }
+}

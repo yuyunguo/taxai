@@ -1,0 +1,62 @@
+{
+  "train": {
+    "n": "37,202",
+    "years (anchor group)": "2008 - 2010, 2011 - 2013, 2014 - 2016",
+    "age, median (IQR)": "69 (58-79)",
+    "female": "16,372 (44.0%)",
+    "emergency/urgent admission": "27,818 (74.8%)",
+    "hours admission to ICU, median (IQR)": "2 (1-18)",
+    "top ICU units": "Medical Intensive Care Unit (MICU) 21%; Cardiac Vascular Intensive Care Unit (CVICU) 20%; Surgical Intensive Care Unit (SICU) 16%; Medical/Surgical Intensive Care Unit (MICU/SICU) 16%",
+    "lab events, median (IQR)": "35 (22-62)",
+    "vital events, median (IQR)": "162 (147-191)",
+    "medication orders, median (IQR)": "37 (25-52)",
+    "any lactate measured": "22,742 (61.1%)",
+    "any troponin T measured": "8,801 (23.7%)",
+    "in-hospital mortality": "3,494 (9.4%)"
+  },
+  "val": {
+    "n": "10,141",
+    "years (anchor group)": "2017 - 2019",
+    "age, median (IQR)": "68 (58-77)",
+    "female": "4,246 (41.9%)",
+    "emergency/urgent admission": "5,711 (56.3%)",
+    "hours admission to ICU, median (IQR)": "2 (1-20)",
+    "top ICU units": "Cardiac Vascular Intensive Care Unit (CVICU) 23%; Medical Intensive Care Unit (MICU) 16%; Neuro Intermediate 14%; Medical/Surgical Intensive Care Unit (MICU/SICU) 12%",
+    "lab events, median (IQR)": "39 (22-66)",
+    "vital events, median (IQR)": "159 (140-183)",
+    "medication orders, median (IQR)": "42 (27-56)",
+    "any lactate measured": "6,686 (65.9%)",
+    "any troponin T measured": "2,045 (20.2%)",
+    "in-hospital mortality": "999 (9.9%)"
+  },
+  "test": {
+    "n": "7,353",
+    "years (anchor group)": "2020 - 2022",
+    "age, median (IQR)": "67 (58-77)",
+    "female": "2,965 (40.3%)",
+    "emergency/urgent admission": "4,544 (61.8%)",
+    "hours admission to ICU, median (IQR)": "2 (1-20)",
+    "top ICU units": "Cardiac Vascular Intensive Care Unit (CVICU) 23%; Neuro Intermediate 18%; Medical Intensive Care Unit (MICU) 13%; Medical/Surgical Intensive Care Unit (MICU/SICU) 11%",
+    "lab events, median (IQR)": "40 (22-67)",
+    "vital events, median (IQR)": "161 (142-188)",
+    "medication orders, median (IQR)": "42 (27-57)",
+    "any lactate measured": "4,727 (64.3%)",
+    "any troponin T measured": "1,484 (20.2%)",
+    "in-hospital mortality": "904 (12.3%)"
+  },
+  "explanation sample": {
+    "n": "500",
+    "years (anchor group)": "2020 - 2022",
+    "age, median (IQR)": "71 (60-81)",
+    "female": "216 (43.2%)",
+    "emergency/urgent admission": "360 (72.0%)",
+    "hours admission to ICU, median (IQR)": "2 (0-21)",
+    "top ICU units": "Medical Intensive Care Unit (MICU) 19%; Coronary Care Unit (CCU) 14%; Medical/Surgical Intensive Care Unit (MICU/SICU) 13%; Cardiac Vascular Intensive Care Unit (CVICU) 13%",
+    "lab events, median (IQR)": "53 (27-78)",
+    "vital events, median (IQR)": "165 (147-192)",
+    "medication orders, median (IQR)": "46 (31-59)",
+    "any lactate measured": "373 (74.6%)",
+    "any troponin T measured": "163 (32.6%)",
+    "in-hospital mortality": "180 (36.0%)"
+  }
+}

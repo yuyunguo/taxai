@@ -1,0 +1,31 @@
+{
+  "input_contrast_median_iqr": [
+    73.5,
+    55.0,
+    88.25
+  ],
+  "by_method": {
+    "static_llm": {
+      "time_refs_mean": 1.65,
+      "any_time_ref": 0.775,
+      "sequence_terms_mean": 0.15,
+      "verdicts": {
+        "too high": 24,
+        "about right": 12,
+        "too low": 4
+      },
+      "verdict_accuracy": 0.4
+    },
+    "taxai": {
+      "time_refs_mean": 1.725,
+      "any_time_ref": 0.9,
+      "sequence_terms_mean": 0.35,
+      "verdicts": {
+        "too high": 27,
+        "about right": 8,
+        "too low": 5
+      },
+      "verdict_accuracy": 0.275
+    }
+  }
+}

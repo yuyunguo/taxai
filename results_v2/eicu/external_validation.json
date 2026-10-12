@@ -1,0 +1,39 @@
+{
+  "n": 58203,
+  "threshold": 0.29595324397087097,
+  "overall": {
+    "n": 58203,
+    "prevalence": 0.1013,
+    "auroc": 0.8019,
+    "auprc": 0.3702,
+    "brier": 0.0778,
+    "brier_null": 0.091,
+    "sensitivity": 0.2745,
+    "ppv": 0.4508,
+    "flagged_frac": 0.0617,
+    "cal_slope": 0.8135,
+    "cal_intercept": -0.1073
+  },
+  "features_entirely_missing": [
+    "NTproBNP_mean",
+    "NTproBNP_std",
+    "NTproBNP_min",
+    "NTproBNP_max",
+    "NTproBNP_first",
+    "NTproBNP_last",
+    "NTproBNP_trend"
+  ],
+  "per_hospital": {
+    "n_hospitals": 113,
+    "auroc_median_iqr": [
+      0.806,
+      0.7773,
+      0.8357
+    ],
+    "obs_exp_median_iqr": [
+      1.1769,
+      0.9029,
+      1.4643
+    ]
+  }
+}

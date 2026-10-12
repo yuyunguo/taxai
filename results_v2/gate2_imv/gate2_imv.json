@@ -1,0 +1,108 @@
+{
+  "threshold": 0.0647,
+  "n_cases": 148,
+  "HIGH": {
+    "n": 28,
+    "events": 14,
+    "model_A": {
+      "auroc": 0.5765,
+      "ci95": [
+        0.3499,
+        0.7813
+      ]
+    },
+    "model_B": {
+      "auroc": 0.4235,
+      "ci95": [
+        0.2344,
+        0.65
+      ]
+    },
+    "static_llm": {
+      "auroc": 0.4286,
+      "ci95": [
+        0.2444,
+        0.6071
+      ]
+    },
+    "static_llm_verdicts": {
+      "too high": 16,
+      "about right": 12
+    },
+    "taxai": {
+      "auroc": 0.2857,
+      "ci95": [
+        0.1345,
+        0.45
+      ]
+    },
+    "taxai_verdicts": {
+      "too high": 18,
+      "about right": 10
+    },
+    "taxai_minus_static": {
+      "diff": -0.1429,
+      "ci95": [
+        -0.3334,
+        0.0714
+      ]
+    }
+  },
+  "LOW": {
+    "n": 120,
+    "events": 60,
+    "model_A": {
+      "auroc": 0.7439,
+      "ci95": [
+        0.6502,
+        0.8321
+      ]
+    },
+    "model_B": {
+      "auroc": 0.8019,
+      "ci95": [
+        0.7193,
+        0.8773
+      ]
+    },
+    "static_llm": {
+      "auroc": 0.5167,
+      "ci95": [
+        0.4453,
+        0.5904
+      ]
+    },
+    "static_llm_verdicts": {
+      "too high": 94,
+      "too low": 26
+    },
+    "taxai": {
+      "auroc": 0.506,
+      "ci95": [
+        0.4244,
+        0.5871
+      ]
+    },
+    "taxai_verdicts": {
+      "too high": 85,
+      "too low": 34,
+      "about right": 1
+    },
+    "taxai_minus_static": {
+      "diff": -0.0107,
+      "ci95": [
+        -0.1038,
+        0.0748
+      ]
+    }
+  },
+  "incremental_taxai_verdict": {
+    "coef": 0.0052,
+    "p": 0.9794683476133107
+  },
+  "decision": {
+    "main_stratum": "LOW",
+    "gate2_open_taxai": false,
+    "timeline_helps_explainer": false
+  }
+}

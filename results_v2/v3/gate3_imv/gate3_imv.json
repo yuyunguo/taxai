@@ -1,0 +1,244 @@
+{
+  "phi4": {
+    "parse_ok": 740,
+    "anchoring_r": 0.0557,
+    "pre_auroc": 0.5533,
+    "empty": {
+      "dBrier": {
+        "est": -0.01086,
+        "ci95": [
+          -0.01686,
+          -0.00526
+        ]
+      },
+      "components": {
+        "M": 0.00112,
+        "I": -0.00114,
+        "D": 0.01312,
+        "dBrier": -0.01086
+      },
+      "post_auroc": 0.5635,
+      "mean_shift": 0.0188
+    },
+    "static_llm": {
+      "dBrier": {
+        "est": 0.0135,
+        "ci95": [
+          -0.00284,
+          0.02942
+        ]
+      },
+      "components": {
+        "M": 0.0091,
+        "I": 0.00428,
+        "D": -0.00867,
+        "dBrier": 0.0135
+      },
+      "post_auroc": 0.5381,
+      "mean_shift": -0.0125,
+      "vs_empty": {
+        "est": 0.02436,
+        "ci95": [
+          0.00633,
+          0.04185
+        ]
+      }
+    },
+    "taxai": {
+      "dBrier": {
+        "est": 0.00942,
+        "ci95": [
+          -0.00979,
+          0.02727
+        ]
+      },
+      "components": {
+        "M": 0.01077,
+        "I": 0.00044,
+        "D": 0.0009,
+        "dBrier": 0.00942
+      },
+      "post_auroc": 0.5163,
+      "mean_shift": 0.0013,
+      "vs_empty": {
+        "est": 0.02028,
+        "ci95": [
+          0.00138,
+          0.03882
+        ]
+      }
+    },
+    "model_b": {
+      "dBrier": {
+        "est": -0.01404,
+        "ci95": [
+          -0.02523,
+          -0.00339
+        ]
+      },
+      "components": {
+        "M": 0.00404,
+        "I": 0.00938,
+        "D": 0.0087,
+        "dBrier": -0.01404
+      },
+      "post_auroc": 0.5882,
+      "mean_shift": 0.0125,
+      "vs_empty": {
+        "est": -0.00318,
+        "ci95": [
+          -0.01442,
+          0.00802
+        ]
+      }
+    },
+    "trajectory_direction": {
+      "dBrier": {
+        "est": -0.0251,
+        "ci95": [
+          -0.0415,
+          -0.00919
+        ]
+      },
+      "components": {
+        "M": 0.00997,
+        "I": 0.00725,
+        "D": 0.02782,
+        "dBrier": -0.0251
+      },
+      "post_auroc": 0.5547,
+      "mean_shift": 0.0399,
+      "vs_empty": {
+        "est": -0.01424,
+        "ci95": [
+          -0.0287,
+          0.00138
+        ]
+      }
+    }
+  },
+  "qwen2.5:14b": {
+    "parse_ok": 740,
+    "anchoring_r": 0.441,
+    "pre_auroc": 0.6069,
+    "empty": {
+      "dBrier": {
+        "est": 0.01458,
+        "ci95": [
+          -0.00656,
+          0.03599
+        ]
+      },
+      "components": {
+        "M": 0.01197,
+        "I": -0.00163,
+        "D": -0.00098,
+        "dBrier": 0.01458
+      },
+      "post_auroc": 0.5751,
+      "mean_shift": -0.0016
+    },
+    "static_llm": {
+      "dBrier": {
+        "est": -0.00905,
+        "ci95": [
+          -0.02339,
+          0.00389
+        ]
+      },
+      "components": {
+        "M": 0.00659,
+        "I": 0.01379,
+        "D": 0.00185,
+        "dBrier": -0.00905
+      },
+      "post_auroc": 0.6322,
+      "mean_shift": 0.003,
+      "vs_empty": {
+        "est": -0.02363,
+        "ci95": [
+          -0.04688,
+          -0.00018
+        ]
+      }
+    },
+    "taxai": {
+      "dBrier": {
+        "est": -0.01242,
+        "ci95": [
+          -0.02885,
+          0.00312
+        ]
+      },
+      "components": {
+        "M": 0.00812,
+        "I": 0.01008,
+        "D": 0.01046,
+        "dBrier": -0.01242
+      },
+      "post_auroc": 0.603,
+      "mean_shift": 0.0172,
+      "vs_empty": {
+        "est": -0.027,
+        "ci95": [
+          -0.05429,
+          0.00073
+        ]
+      }
+    },
+    "model_b": {
+      "dBrier": {
+        "est": 0.05789,
+        "ci95": [
+          0.03104,
+          0.08416
+        ]
+      },
+      "components": {
+        "M": 0.02388,
+        "I": 0.02328,
+        "D": -0.05728,
+        "dBrier": 0.05789
+      },
+      "post_auroc": 0.6659,
+      "mean_shift": -0.094,
+      "vs_empty": {
+        "est": 0.04331,
+        "ci95": [
+          0.01018,
+          0.07486
+        ]
+      }
+    },
+    "trajectory_direction": {
+      "dBrier": {
+        "est": -0.03417,
+        "ci95": [
+          -0.05406,
+          -0.01565
+        ]
+      },
+      "components": {
+        "M": 0.01065,
+        "I": 0.01123,
+        "D": 0.0336,
+        "dBrier": -0.03417
+      },
+      "post_auroc": 0.6321,
+      "mean_shift": 0.0551,
+      "vs_empty": {
+        "est": -0.04875,
+        "ci95": [
+          -0.07676,
+          -0.02161
+        ]
+      }
+    }
+  },
+  "decision_primary_judge": {
+    "gate3_open_informative_model_b": false,
+    "gate3_open_direction_control": true,
+    "static_llm_harmful": false,
+    "taxai_harmful": false
+  }
+}

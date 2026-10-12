@@ -1,0 +1,114 @@
+{
+  "HIGH": {
+    "empty": {
+      "BAR": 0.5136,
+      "ci95": [
+        0.4506,
+        0.5752
+      ],
+      "accept_if_correct": 0.5541,
+      "accept_if_wrong": 0.5269
+    },
+    "random": {
+      "BAR": 0.5354,
+      "ci95": [
+        0.4898,
+        0.5783
+      ],
+      "accept_if_correct": 0.1783,
+      "accept_if_wrong": 0.1075
+    },
+    "shap": {
+      "BAR": 0.4911,
+      "ci95": [
+        0.434,
+        0.5498
+      ],
+      "accept_if_correct": 0.7134,
+      "accept_if_wrong": 0.7312
+    },
+    "static_llm": {
+      "BAR": 0.5205,
+      "ci95": [
+        0.4974,
+        0.5469
+      ],
+      "accept_if_correct": 0.9873,
+      "accept_if_wrong": 0.9462
+    },
+    "taxai": {
+      "BAR": 0.5078,
+      "ci95": [
+        0.4809,
+        0.5367
+      ],
+      "accept_if_correct": 0.9618,
+      "accept_if_wrong": 0.9462
+    },
+    "taxai_minus_static": {
+      "diff": -0.0127,
+      "ci95": [
+        -0.0426,
+        0.0187
+      ]
+    },
+    "n_correct": 157,
+    "n_wrong": 93
+  },
+  "LOW": {
+    "empty": {
+      "BAR": 0.6317,
+      "ci95": [
+        0.528,
+        0.7302
+      ],
+      "accept_if_correct": 0.5242,
+      "accept_if_wrong": 0.2609
+    },
+    "random": {
+      "BAR": 0.6295,
+      "ci95": [
+        0.5267,
+        0.7212
+      ],
+      "accept_if_correct": 0.5198,
+      "accept_if_wrong": 0.2609
+    },
+    "shap": {
+      "BAR": 0.6221,
+      "ci95": [
+        0.5116,
+        0.7283
+      ],
+      "accept_if_correct": 0.7225,
+      "accept_if_wrong": 0.4783
+    },
+    "static_llm": {
+      "BAR": 0.5591,
+      "ci95": [
+        0.4567,
+        0.6656
+      ],
+      "accept_if_correct": 0.7269,
+      "accept_if_wrong": 0.6087
+    },
+    "taxai": {
+      "BAR": 0.5547,
+      "ci95": [
+        0.4523,
+        0.6556
+      ],
+      "accept_if_correct": 0.7181,
+      "accept_if_wrong": 0.6087
+    },
+    "taxai_minus_static": {
+      "diff": -0.0044,
+      "ci95": [
+        -0.1128,
+        0.0988
+      ]
+    },
+    "n_correct": 227,
+    "n_wrong": 23
+  }
+}

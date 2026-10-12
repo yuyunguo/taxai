@@ -1,0 +1,6 @@
+Thu Oct  1 18:25:14 EDT 2026
+c3e15da3cc52d53fad6df8a9ec85f8f5bde99ccde9393d53a910a8275bb5cf87  src/pipeline_v2/faithfulness.py
+7b05bd5df598df79eecf11efa1638d095b8da719aa7c54fb927c7ce0f0bb5462  tests/test_faithfulness.py
+708613a0328117ab4829f408af4688c0c8c76658a853df7dcaa6c5ca2d89f7e2  src/pipeline_v2/evaluate.py
+6fef4a80e6b29cd9708bc7a75e9d0d6e5dbbc0153932179a9331163cf2620a83  src/pipeline_v2/stats.py
+d35cc9531acd19ed93943800187a027fd943352152488156f749de736fddd2b0  src/pipeline_v2/prompts.py
